@@ -12,6 +12,8 @@ package model;
 public class ComplejoPolar extends ComplejoBinomica {
     // Desarrollar:
     // 1. Estructura de complejos en forma polar
+    public static float modulo;
+    public static float argumento;
     // 2. Funciones set/get
     // 3. Operaciones avanzadas
     // 4. Funciones de pasajes binomica->polar / polar->binomica
