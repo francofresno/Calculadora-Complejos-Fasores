@@ -12,6 +12,8 @@ package model;
 public class ComplejoBinomica {
     // Desarrollar:
     // 1. Estructura de complejos en forma binomica
+    public static float componenteReal;
+    public static float componenteImaginaria;
     // 2. Funciones set/get
     // 3. Operaciones basicas
 }
