@@ -6,28 +6,31 @@ package model;
  */
 public class ComplejoBinomica {
     // 1. Estructura de complejos en forma binomica
-    public static float componenteReal;
-    public static float componenteImaginaria;
+    public float componenteReal;
+    public float componenteImaginaria;
+    
+    public ComplejoBinomica () {
+    }
     
     public ComplejoBinomica (float re,  float im) {
-        componenteReal = re;
-        componenteImaginaria = im;
+        this.componenteReal = re;
+        this.componenteImaginaria = im;
     }
     // 2. Funciones set/get
-    public static float getComponenteReal () {
-        return componenteReal;
+    public float getComponenteReal () {
+        return this.componenteReal;
     }
     
-    public static void setComponenteReal (float re) {
-        componenteReal = re;
+    public void setComponenteReal (float re) {
+        this.componenteReal = re;
     }
     
-    public static float getComponenteImaginaria () {
-        return componenteReal;
+    public float getComponenteImaginaria () {
+        return this.componenteImaginaria;
     }
     
-    public static void setComponenteImaginaria (float im) {
-        componenteReal = im;
+    public void setComponenteImaginaria (float im) {
+        this.componenteImaginaria = im;
     }
     // 3. Operaciones basicas
 
