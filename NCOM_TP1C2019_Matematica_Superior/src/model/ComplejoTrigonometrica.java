@@ -1,17 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package model;
 
 /**
  *
  * @author Franco
  */
-public class ComplejoTrigonometrica extends ComplejoPolar {
+public class ComplejoTrigonometrica {
     // Desarrollar:
     // 1. Estructura complejo en forma trigonometrica
+    public static float modulo;
+    public static float argumento;
     // 2. Funciones set/get
     // 3. Funcion pasaje trigonometrica->binomica
 }
