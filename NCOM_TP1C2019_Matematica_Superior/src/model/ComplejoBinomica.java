@@ -6,32 +6,46 @@ package model;
  */
 public class ComplejoBinomica {
     // 1. Estructura de complejos en forma binomica
-    public float componenteReal;
-    public float componenteImaginaria;
+    public double componenteReal;
+    public double componenteImaginaria;
     
     public ComplejoBinomica () {
+        this.componenteReal = 0;
+        this.componenteImaginaria = 0;
     }
     
-    public ComplejoBinomica (float re,  float im) {
+    public ComplejoBinomica (double re,  double im) {
         this.componenteReal = re;
         this.componenteImaginaria = im;
     }
     // 2. Funciones set/get
-    public float getComponenteReal () {
+    public double getComponenteReal () {
         return this.componenteReal;
     }
     
-    public void setComponenteReal (float re) {
+    public void setComponenteReal (double re) {
         this.componenteReal = re;
     }
     
-    public float getComponenteImaginaria () {
+    public double getComponenteImaginaria () {
         return this.componenteImaginaria;
     }
     
-    public void setComponenteImaginaria (float im) {
+    public void setComponenteImaginaria (double im) {
         this.componenteImaginaria = im;
     }
     // 3. Operaciones basicas
 
+    public ComplejoBinomica suma( ComplejoBinomica complejoBin ) {
+        this.componenteReal += complejoBin.componenteReal;
+        this.componenteImaginaria += complejoBin.componenteImaginaria;
+        return this;
+    }
+    
+    // 4. Pasajes Polar->Binomica
+    public ComplejoBinomica polarABinomica (ComplejoPolar complejoPol) {
+        this.componenteReal = complejoPol.modulo * Math.cos(complejoPol.argumento);
+        this.componenteImaginaria = complejoPol.modulo * Math.sin(complejoPol.argumento);
+        return this;
+    }
 }
