@@ -37,6 +37,17 @@ public class ComplejoPolar {
     }
     
     // 3. Operaciones avanzadas
+    public ComplejoPolar producto( ComplejoPolar complejoPol ) {
+        this.modulo *= complejoPol.modulo;
+        this.argumento += complejoPol.argumento;
+        return this;
+    }
+
+    public ComplejoPolar cociente( ComplejoPolar complejoPol ) {
+        this.modulo *= 1/complejoPol.modulo;
+        this.argumento -= complejoPol.argumento;
+        return this;
+    }
     
     // 4. Funcion de pasaje polar->binomica
     public ComplejoPolar binomicaAPolar (ComplejoBinomica complejoBin) {
