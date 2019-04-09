@@ -4,6 +4,9 @@ package model;
  *
  * @author Franco
  */
+
+import java.lang.Math;
+
 public class ComplejoPolar {
     // 1. Estructura de complejos en forma polar
     public double modulo;
@@ -46,6 +49,12 @@ public class ComplejoPolar {
     public ComplejoPolar cociente( ComplejoPolar complejoPol ) {
         this.modulo *= 1/complejoPol.modulo;
         this.argumento -= complejoPol.argumento;
+        return this;
+    }
+    
+    public ComplejoPolar potenciaNatural(int exponenete){
+        modulo = Math.pow(modulo,exponenete);
+        argumento *= exponenete ;
         return this;
     }
     

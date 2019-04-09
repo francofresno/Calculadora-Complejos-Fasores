@@ -12,12 +12,14 @@ public class Main {
         
         // PRUEBAS
         ComplejoPolar a = new ComplejoPolar();
-        ComplejoBinomica b = new ComplejoBinomica(0,2);
+        ComplejoBinomica b = new ComplejoBinomica(3,-1);
         
-        a.binomicaAPolar(b);
-        
-        System.out.println(a.modulo);
-        System.out.println(a.argumento);
+        a=a.binomicaAPolar(b);
+        a=a.potenciaNatural(5);
+        b=b.polarABinomica(a);
+                
+        System.out.println(b.componenteReal);
+        System.out.println(b.componenteImaginaria);
 
     }
 
