@@ -53,8 +53,14 @@ public class ComplejoPolar {
     }
     
     public ComplejoPolar potenciaNatural(int exponenete){
-        modulo = Math.pow(modulo,exponenete);
-        argumento *= exponenete ;
+        this.modulo = Math.pow(this.modulo,exponenete);
+        this.argumento *= exponenete ;
+        return this;
+    }
+    
+    public ComplejoPolar radicacionNatural(int indice){
+        this.modulo = Math.pow(this.modulo,1/indice);
+       // this.argumento = HAY MUCHAS SOLUCIONES, IMPLEMENTACION?;
         return this;
     }
     
@@ -72,11 +78,7 @@ public class ComplejoPolar {
     }
     
     public double elModuloDe (double re, double im) {
-        return Math.sqrt(elCuadradoDe(re) + elCuadradoDe(im));
-    }
-    
-    public double elCuadradoDe (double num) {
-        return Math.pow(num, 2);
+        return Math.sqrt(Math.pow(re, 2) + Math.pow(im, 2));
     }
     
     public double elArcotangenteDe (double re, double im) {

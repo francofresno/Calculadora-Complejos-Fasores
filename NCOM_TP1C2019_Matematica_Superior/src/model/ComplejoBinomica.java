@@ -48,14 +48,14 @@ public class ComplejoBinomica {
         return this;
     }
 
-    public ComplejoBinomica complemento(){
-        componenteImaginaria *= (-1); 
+    public ComplejoBinomica complemento( ComplejoBinomica complejoBin ){
+        this.componenteImaginaria *= (-1); 
         return this;
     }
  
        
     // 4. Pasajes Polar->Binomica
-    public ComplejoBinomica polarABinomica (ComplejoPolar complejoPol) {
+    public ComplejoBinomica polarABinomica ( ComplejoPolar complejoPol ) {
         this.componenteReal = complejoPol.modulo * Math.cos(complejoPol.argumento);
         this.componenteImaginaria = complejoPol.modulo * Math.sin(complejoPol.argumento);
         return this;
