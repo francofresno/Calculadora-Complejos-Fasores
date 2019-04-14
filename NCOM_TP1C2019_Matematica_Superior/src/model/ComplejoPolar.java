@@ -52,9 +52,9 @@ public class ComplejoPolar {
         return this;
     }
     
-    public ComplejoPolar potenciaNatural(int exponenete){
-        this.modulo = Math.pow(this.modulo,exponenete);
-        this.argumento *= exponenete ;
+    public ComplejoPolar potenciaNatural(int exponente){
+        this.modulo = Math.pow(this.modulo,exponente);
+        this.argumento *= exponente ;
         return this;
     }
     
@@ -68,13 +68,38 @@ public class ComplejoPolar {
     public ComplejoPolar binomicaAPolar (ComplejoBinomica complejoBin) {
         this.modulo = elModuloDe(complejoBin.componenteReal,complejoBin.componenteImaginaria);
         
-        if (complejoBin.componenteReal != 0) {
+        if (complejoBin.componenteReal != 0 && complejoBin.componenteImaginaria !=0) {
             this.argumento = Math.toRadians( elArcotangenteDe(complejoBin.componenteReal,complejoBin.componenteImaginaria) );
+            this.argumento = arreglarArgumento(this.argumento);
         } else {
-            this.argumento = (Math.PI)/2;
-        }
-        
+           if(complejoBin.componenteReal == 0){
+                        if(complejoBin.componenteImaginaria > 0){
+                         this.argumento = (Math.PI)/2;
+                    } else{
+                         this.argumento = (3 * Math.PI) / 2;
+                    }   
+           }   
+          if(complejoBin.componenteImaginaria == 0){
+                    if ( complejoBin.componenteReal >=0){
+                        this.argumento = 0;
+                    }else{
+                        this.argumento = Math.PI ;
+                    }           
+            }
+        }       
         return this;
+    }
+    
+    public double arreglarArgumento (double arg){
+        while (arg > (2 * Math.PI) || arg < 0){
+            if (arg > (2 * Math.PI)){
+                arg -=(2 * Math.PI);
+            }
+            if (arg < 0){
+                arg += (2 * Math.PI);
+            }
+        }
+        return arg;
     }
     
     public double elModuloDe (double re, double im) {

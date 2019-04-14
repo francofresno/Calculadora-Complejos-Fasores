@@ -12,7 +12,7 @@ public class Main {
         
         // PRUEBAS
         ComplejoPolar a = new ComplejoPolar();
-        ComplejoBinomica b = new ComplejoBinomica(3,-1);
+        ComplejoBinomica b = new ComplejoBinomica(1,-1);
         
         a=a.binomicaAPolar(b);
         a=a.potenciaNatural(5);
