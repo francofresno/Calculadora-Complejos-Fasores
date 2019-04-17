@@ -1,12 +1,5 @@
 package model;
 
-/**
- *
- * @author Franco
- */
-
-import java.lang.Math;
-
 public class ComplejoPolar {
     // 1. Estructura de complejos en forma polar
     public double modulo;
@@ -58,7 +51,7 @@ public class ComplejoPolar {
         return this;
     }
     
-    public ComplejoPolar radicacionNatural(int indice){
+    public ComplejoPolar radicacionNatural(int indice) {
         this.modulo = Math.pow(this.modulo,1/indice);
        // this.argumento = HAY MUCHAS SOLUCIONES, IMPLEMENTACION?;
         return this;
@@ -69,18 +62,18 @@ public class ComplejoPolar {
         this.modulo = elModuloDe(complejoBin.componenteReal,complejoBin.componenteImaginaria);
         
         if (complejoBin.componenteReal != 0 && complejoBin.componenteImaginaria !=0) {
-            this.argumento = Math.toRadians( elArcotangenteDe(complejoBin.componenteReal,complejoBin.componenteImaginaria) );
-            this.argumento = arreglarArgumento(this.argumento);
+            double argumentoSinArreglo = Math.toRadians( elArcotangenteDe(complejoBin.componenteReal,complejoBin.componenteImaginaria) );
+            this.argumento = arreglarArgumento(argumentoSinArreglo);
         } else {
-           if(complejoBin.componenteReal == 0){
-                        if(complejoBin.componenteImaginaria > 0){
+           if(complejoBin.componenteReal == 0) {
+                        if(complejoBin.componenteImaginaria > 0) {
                          this.argumento = (Math.PI)/2;
-                    } else{
+                    } else {
                          this.argumento = (3 * Math.PI) / 2;
                     }   
            }   
-          if(complejoBin.componenteImaginaria == 0){
-                    if ( complejoBin.componenteReal >=0){
+          if(complejoBin.componenteImaginaria == 0) {
+                    if ( complejoBin.componenteReal >=0) {
                         this.argumento = 0;
                     }else{
                         this.argumento = Math.PI ;
@@ -90,12 +83,12 @@ public class ComplejoPolar {
         return this;
     }
     
-    public double arreglarArgumento (double arg){
-        while (arg > (2 * Math.PI) || arg < 0){
-            if (arg > (2 * Math.PI)){
+    public double arreglarArgumento (double arg) {
+        while (arg > (2 * Math.PI) || arg < 0) {
+            if (arg > (2 * Math.PI)) {
                 arg -=(2 * Math.PI);
             }
-            if (arg < 0){
+            if (arg < 0) {
                 arg += (2 * Math.PI);
             }
         }

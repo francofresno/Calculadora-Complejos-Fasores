@@ -1,9 +1,5 @@
 package model;
 
-/**
- *
- * @author Franco
- */
 public class Fasores{
     // 1. Estrucutra fasores
     public double amplitud;

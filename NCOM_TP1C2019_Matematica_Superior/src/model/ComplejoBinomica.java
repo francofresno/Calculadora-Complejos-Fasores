@@ -1,9 +1,5 @@
 package model;
 
-/**
- *
- * @author Franco
- */
 public class ComplejoBinomica {
     // 1. Estructura de complejos en forma binomica
     public double componenteReal;
