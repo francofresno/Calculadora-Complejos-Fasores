@@ -27,21 +27,131 @@ public class interfaz extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanelSideMenu = new javax.swing.JPanel();
+        jPanelAppTitle = new javax.swing.JPanel();
+        appTitle = new java.awt.Label();
+        jPanelAppTitle1 = new javax.swing.JPanel();
+        jButtonVolver = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Inicio");
+        setBackground(new java.awt.Color(225, 232, 240));
+        setPreferredSize(new java.awt.Dimension(1366, 768));
+        setSize(new java.awt.Dimension(1366, 768));
+
+        jPanelSideMenu.setBackground(new java.awt.Color(25, 33, 43));
+        jPanelSideMenu.setToolTipText("");
+
+        jPanelAppTitle.setBackground(new java.awt.Color(38, 47, 61));
+        jPanelAppTitle.setToolTipText("");
+
+        appTitle.setAlignment(java.awt.Label.CENTER);
+        appTitle.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        appTitle.setForeground(new java.awt.Color(225, 232, 240));
+        appTitle.setText("NCOM APP");
+
+        javax.swing.GroupLayout jPanelAppTitleLayout = new javax.swing.GroupLayout(jPanelAppTitle);
+        jPanelAppTitle.setLayout(jPanelAppTitleLayout);
+        jPanelAppTitleLayout.setHorizontalGroup(
+            jPanelAppTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(appTitle, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE)
+        );
+        jPanelAppTitleLayout.setVerticalGroup(
+            jPanelAppTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(appTitle, javax.swing.GroupLayout.DEFAULT_SIZE, 63, Short.MAX_VALUE)
+        );
+
+        appTitle.getAccessibleContext().setAccessibleDescription("Titulo de la app");
+
+        jPanelAppTitle1.setBackground(new java.awt.Color(38, 47, 61));
+        jPanelAppTitle1.setToolTipText("");
+
+        jButtonVolver.setBackground(new java.awt.Color(38, 47, 61));
+        jButtonVolver.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButtonVolver.setForeground(new java.awt.Color(225, 232, 240));
+        jButtonVolver.setText("Volver");
+        jButtonVolver.setBorder(null);
+        jButtonVolver.setBorderPainted(false);
+        jButtonVolver.setContentAreaFilled(false);
+        jButtonVolver.setCursor(new java.awt.Cursor(java.awt.Cursor.MOVE_CURSOR));
+        jButtonVolver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonVolverActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanelAppTitle1Layout = new javax.swing.GroupLayout(jPanelAppTitle1);
+        jPanelAppTitle1.setLayout(jPanelAppTitle1Layout);
+        jPanelAppTitle1Layout.setHorizontalGroup(
+            jPanelAppTitle1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelAppTitle1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButtonVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jPanelAppTitle1Layout.setVerticalGroup(
+            jPanelAppTitle1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelAppTitle1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButtonVolver, javax.swing.GroupLayout.DEFAULT_SIZE, 17, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout jPanelSideMenuLayout = new javax.swing.GroupLayout(jPanelSideMenu);
+        jPanelSideMenu.setLayout(jPanelSideMenuLayout);
+        jPanelSideMenuLayout.setHorizontalGroup(
+            jPanelSideMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanelAppTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanelAppTitle1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanelSideMenuLayout.setVerticalGroup(
+            jPanelSideMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelSideMenuLayout.createSequentialGroup()
+                .addComponent(jPanelAppTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 301, Short.MAX_VALUE)
+                .addComponent(jPanelAppTitle1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        jPanelAppTitle.getAccessibleContext().setAccessibleName("titleApp");
+        jPanelAppTitle.getAccessibleContext().setAccessibleDescription("Titulo de la App en menu");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 31, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanelSideMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(382, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanelSideMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        pack();
+        setSize(new java.awt.Dimension(714, 442));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVolverActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonVolverActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +189,11 @@ public class interfaz extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private java.awt.Label appTitle;
+    private javax.swing.JButton jButtonVolver;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanelAppTitle;
+    private javax.swing.JPanel jPanelAppTitle1;
+    private javax.swing.JPanel jPanelSideMenu;
     // End of variables declaration//GEN-END:variables
 }
