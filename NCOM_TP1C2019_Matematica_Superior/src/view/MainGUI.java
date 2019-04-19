@@ -99,7 +99,7 @@ public class MainGUI extends javax.swing.JFrame {
         jPanelAppTitleLayout.setVerticalGroup(
             jPanelAppTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelAppTitleLayout.createSequentialGroup()
-                .addComponent(appTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(appTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -135,7 +135,7 @@ public class MainGUI extends javax.swing.JFrame {
             jPanelAppTitle1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelAppTitle1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButtonVolver, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButtonVolver, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -146,6 +146,7 @@ public class MainGUI extends javax.swing.JFrame {
         jButtonOpBasicas.setText("   Operaciones Básicas");
         jButtonOpBasicas.setBorder(null);
         jButtonOpBasicas.setBorderPainted(false);
+        jButtonOpBasicas.setContentAreaFilled(false);
         jButtonOpBasicas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButtonOpBasicas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -160,7 +161,13 @@ public class MainGUI extends javax.swing.JFrame {
         jButtonOpAvanzadas.setText(" Operaciones Avanzadas");
         jButtonOpAvanzadas.setBorder(null);
         jButtonOpAvanzadas.setBorderPainted(false);
+        jButtonOpAvanzadas.setContentAreaFilled(false);
         jButtonOpAvanzadas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButtonOpAvanzadas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonOpAvanzadasActionPerformed(evt);
+            }
+        });
 
         jButtonFasores.setBackground(new java.awt.Color(25, 33, 43));
         jButtonFasores.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -169,7 +176,13 @@ public class MainGUI extends javax.swing.JFrame {
         jButtonFasores.setText("   Sumatoria de Fasores");
         jButtonFasores.setBorder(null);
         jButtonFasores.setBorderPainted(false);
+        jButtonFasores.setContentAreaFilled(false);
         jButtonFasores.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButtonFasores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonFasoresActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanelSideMenuLayout = new javax.swing.GroupLayout(jPanelSideMenu);
         jPanelSideMenu.setLayout(jPanelSideMenuLayout);
@@ -199,7 +212,7 @@ public class MainGUI extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jButtonFasores)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanelAppTitle1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jPanelAppTitle1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jPanelAppTitle.getAccessibleContext().setAccessibleName("titleApp");
@@ -207,15 +220,36 @@ public class MainGUI extends javax.swing.JFrame {
 
         jCardOpBasicas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/Op Básicas.png"))); // NOI18N
         jCardOpBasicas.setBorder(null);
+        jCardOpBasicas.setContentAreaFilled(false);
+        jCardOpBasicas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jCardOpBasicas.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jCardOpBasicas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCardOpBasicasActionPerformed(evt);
+            }
+        });
 
         jCardFasores.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/Fasores.png"))); // NOI18N
         jCardFasores.setBorder(null);
+        jCardFasores.setContentAreaFilled(false);
+        jCardFasores.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jCardFasores.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jCardFasores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCardFasoresActionPerformed(evt);
+            }
+        });
 
         jCardOpAvanzadas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/Op Avanzadas.png"))); // NOI18N
         jCardOpAvanzadas.setBorder(null);
+        jCardOpAvanzadas.setContentAreaFilled(false);
+        jCardOpAvanzadas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jCardOpAvanzadas.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jCardOpAvanzadas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCardOpAvanzadasActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -259,6 +293,31 @@ public class MainGUI extends javax.swing.JFrame {
         this.dispose();
         new OpBasicasGUI().setVisible(true);
     }//GEN-LAST:event_jButtonOpBasicasActionPerformed
+
+    private void jCardOpBasicasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCardOpBasicasActionPerformed
+        this.dispose();
+        new OpBasicasGUI().setVisible(true);
+    }//GEN-LAST:event_jCardOpBasicasActionPerformed
+
+    private void jButtonOpAvanzadasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonOpAvanzadasActionPerformed
+        this.dispose();
+        new OpAvanzadasGUI().setVisible(true);
+    }//GEN-LAST:event_jButtonOpAvanzadasActionPerformed
+
+    private void jCardOpAvanzadasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCardOpAvanzadasActionPerformed
+        this.dispose();
+        new OpAvanzadasGUI().setVisible(true);
+    }//GEN-LAST:event_jCardOpAvanzadasActionPerformed
+
+    private void jButtonFasoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFasoresActionPerformed
+        this.dispose();
+        new FasoresGUI().setVisible(true);
+    }//GEN-LAST:event_jButtonFasoresActionPerformed
+
+    private void jCardFasoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCardFasoresActionPerformed
+        this.dispose();
+        new FasoresGUI().setVisible(true);
+    }//GEN-LAST:event_jCardFasoresActionPerformed
 
     /**
      * @param args the command line arguments
