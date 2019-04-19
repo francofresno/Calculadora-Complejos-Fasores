@@ -32,7 +32,12 @@ public class interfaz extends javax.swing.JFrame {
         appTitle = new java.awt.Label();
         jPanelAppTitle1 = new javax.swing.JPanel();
         jButtonVolver = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
+        jButtonOpBasicas = new javax.swing.JButton();
+        jButtonOpAvanzadas = new javax.swing.JButton();
+        jButtonFasores = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Inicio");
@@ -55,11 +60,13 @@ public class interfaz extends javax.swing.JFrame {
         jPanelAppTitle.setLayout(jPanelAppTitleLayout);
         jPanelAppTitleLayout.setHorizontalGroup(
             jPanelAppTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(appTitle, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE)
+            .addComponent(appTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanelAppTitleLayout.setVerticalGroup(
             jPanelAppTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(appTitle, javax.swing.GroupLayout.DEFAULT_SIZE, 63, Short.MAX_VALUE)
+            .addGroup(jPanelAppTitleLayout.createSequentialGroup()
+                .addComponent(appTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         appTitle.getAccessibleContext().setAccessibleDescription("Titulo de la app");
@@ -70,6 +77,7 @@ public class interfaz extends javax.swing.JFrame {
         jButtonVolver.setBackground(new java.awt.Color(38, 47, 61));
         jButtonVolver.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButtonVolver.setForeground(new java.awt.Color(225, 232, 240));
+        jButtonVolver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/Back Icon.png"))); // NOI18N
         jButtonVolver.setText("Volver");
         jButtonVolver.setBorder(null);
         jButtonVolver.setBorderPainted(false);
@@ -93,9 +101,38 @@ public class interfaz extends javax.swing.JFrame {
             jPanelAppTitle1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelAppTitle1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButtonVolver, javax.swing.GroupLayout.DEFAULT_SIZE, 17, Short.MAX_VALUE)
+                .addComponent(jButtonVolver, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
+
+        jButtonOpBasicas.setBackground(new java.awt.Color(25, 33, 43));
+        jButtonOpBasicas.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButtonOpBasicas.setForeground(new java.awt.Color(225, 232, 240));
+        jButtonOpBasicas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/Plus Icon.png"))); // NOI18N
+        jButtonOpBasicas.setText("   Operaciones Básicas");
+        jButtonOpBasicas.setBorder(null);
+        jButtonOpBasicas.setBorderPainted(false);
+        jButtonOpBasicas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonOpBasicasActionPerformed(evt);
+            }
+        });
+
+        jButtonOpAvanzadas.setBackground(new java.awt.Color(25, 33, 43));
+        jButtonOpAvanzadas.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButtonOpAvanzadas.setForeground(new java.awt.Color(225, 232, 240));
+        jButtonOpAvanzadas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/Square Root Icon.png"))); // NOI18N
+        jButtonOpAvanzadas.setText(" Operaciones Avanzadas");
+        jButtonOpAvanzadas.setBorder(null);
+        jButtonOpAvanzadas.setBorderPainted(false);
+
+        jButtonFasores.setBackground(new java.awt.Color(25, 33, 43));
+        jButtonFasores.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButtonFasores.setForeground(new java.awt.Color(225, 232, 240));
+        jButtonFasores.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/Fasores Icon.png"))); // NOI18N
+        jButtonFasores.setText("   Sumatoria de Fasores");
+        jButtonFasores.setBorder(null);
+        jButtonFasores.setBorderPainted(false);
 
         javax.swing.GroupLayout jPanelSideMenuLayout = new javax.swing.GroupLayout(jPanelSideMenu);
         jPanelSideMenu.setLayout(jPanelSideMenuLayout);
@@ -103,28 +140,45 @@ public class interfaz extends javax.swing.JFrame {
             jPanelSideMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanelAppTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanelAppTitle1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelSideMenuLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanelSideMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButtonOpAvanzadas, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButtonFasores))
+                .addContainerGap())
+            .addGroup(jPanelSideMenuLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButtonOpBasicas)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanelSideMenuLayout.setVerticalGroup(
             jPanelSideMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelSideMenuLayout.createSequentialGroup()
                 .addComponent(jPanelAppTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 301, Short.MAX_VALUE)
+                .addGap(42, 42, 42)
+                .addComponent(jButtonOpBasicas)
+                .addGap(18, 18, 18)
+                .addComponent(jButtonOpAvanzadas)
+                .addGap(18, 18, 18)
+                .addComponent(jButtonFasores)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanelAppTitle1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jPanelAppTitle.getAccessibleContext().setAccessibleName("titleApp");
         jPanelAppTitle.getAccessibleContext().setAccessibleDescription("Titulo de la App en menu");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 31, Short.MAX_VALUE)
-        );
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/Op Básicas.png"))); // NOI18N
+        jButton2.setBorder(null);
+        jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/Fasores.png"))); // NOI18N
+        jButton3.setBorder(null);
+        jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/Op Avanzadas.png"))); // NOI18N
+        jButton4.setBorder(null);
+        jButton4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -132,17 +186,24 @@ public class interfaz extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanelSideMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(382, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 119, Short.MAX_VALUE)
+                .addGap(34, 34, 34)
+                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 119, Short.MAX_VALUE)
+                .addGap(33, 33, 33)
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 119, Short.MAX_VALUE)
+                .addContainerGap(45, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanelSideMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(55, 55, 55)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 249, Short.MAX_VALUE)
+                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(99, Short.MAX_VALUE))
         );
 
         setSize(new java.awt.Dimension(714, 442));
@@ -152,6 +213,10 @@ public class interfaz extends javax.swing.JFrame {
     private void jButtonVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVolverActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonVolverActionPerformed
+
+    private void jButtonOpBasicasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonOpBasicasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonOpBasicasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -190,8 +255,13 @@ public class interfaz extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private java.awt.Label appTitle;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButtonFasores;
+    private javax.swing.JButton jButtonOpAvanzadas;
+    private javax.swing.JButton jButtonOpBasicas;
     private javax.swing.JButton jButtonVolver;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelAppTitle;
     private javax.swing.JPanel jPanelAppTitle1;
     private javax.swing.JPanel jPanelSideMenu;
