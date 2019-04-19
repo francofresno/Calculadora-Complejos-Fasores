@@ -9,12 +9,12 @@ package view;
  *
  * @author Franco
  */
-public class interfaz extends javax.swing.JFrame {
+public class MainGUI extends javax.swing.JFrame {
 
     /**
      * Creates new form interfaz
      */
-    public interfaz() {
+    public MainGUI() {
         initComponents();
     }
 
@@ -27,6 +27,9 @@ public class interfaz extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanelFooter = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jPanelSideMenu = new javax.swing.JPanel();
         jPanelAppTitle = new javax.swing.JPanel();
         appTitle = new java.awt.Label();
@@ -44,6 +47,37 @@ public class interfaz extends javax.swing.JFrame {
         setBackground(new java.awt.Color(225, 232, 240));
         setPreferredSize(new java.awt.Dimension(1366, 768));
         setSize(new java.awt.Dimension(1366, 768));
+
+        jPanelFooter.setBackground(new java.awt.Color(31, 103, 166));
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(225, 232, 240));
+        jLabel1.setText("CREADO POR:");
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/logo utn.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelFooterLayout = new javax.swing.GroupLayout(jPanelFooter);
+        jPanelFooter.setLayout(jPanelFooterLayout);
+        jPanelFooterLayout.setHorizontalGroup(
+            jPanelFooterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelFooterLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelFooterLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addContainerGap())
+        );
+        jPanelFooterLayout.setVerticalGroup(
+            jPanelFooterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelFooterLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         jPanelSideMenu.setBackground(new java.awt.Color(25, 33, 43));
         jPanelSideMenu.setToolTipText("");
@@ -82,7 +116,7 @@ public class interfaz extends javax.swing.JFrame {
         jButtonVolver.setBorder(null);
         jButtonVolver.setBorderPainted(false);
         jButtonVolver.setContentAreaFilled(false);
-        jButtonVolver.setCursor(new java.awt.Cursor(java.awt.Cursor.MOVE_CURSOR));
+        jButtonVolver.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButtonVolver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonVolverActionPerformed(evt);
@@ -112,6 +146,7 @@ public class interfaz extends javax.swing.JFrame {
         jButtonOpBasicas.setText("   Operaciones Básicas");
         jButtonOpBasicas.setBorder(null);
         jButtonOpBasicas.setBorderPainted(false);
+        jButtonOpBasicas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButtonOpBasicas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonOpBasicasActionPerformed(evt);
@@ -125,6 +160,7 @@ public class interfaz extends javax.swing.JFrame {
         jButtonOpAvanzadas.setText(" Operaciones Avanzadas");
         jButtonOpAvanzadas.setBorder(null);
         jButtonOpAvanzadas.setBorderPainted(false);
+        jButtonOpAvanzadas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jButtonFasores.setBackground(new java.awt.Color(25, 33, 43));
         jButtonFasores.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -133,6 +169,7 @@ public class interfaz extends javax.swing.JFrame {
         jButtonFasores.setText("   Sumatoria de Fasores");
         jButtonFasores.setBorder(null);
         jButtonFasores.setBorderPainted(false);
+        jButtonFasores.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout jPanelSideMenuLayout = new javax.swing.GroupLayout(jPanelSideMenu);
         jPanelSideMenu.setLayout(jPanelSideMenuLayout);
@@ -186,24 +223,28 @@ public class interfaz extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanelSideMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
-                .addComponent(jCardOpBasicas, javax.swing.GroupLayout.PREFERRED_SIZE, 119, Short.MAX_VALUE)
-                .addGap(34, 34, 34)
-                .addComponent(jCardOpAvanzadas, javax.swing.GroupLayout.PREFERRED_SIZE, 119, Short.MAX_VALUE)
-                .addGap(33, 33, 33)
-                .addComponent(jCardFasores, javax.swing.GroupLayout.PREFERRED_SIZE, 119, Short.MAX_VALUE)
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addGap(29, 29, 29)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jCardOpBasicas, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE)
+                        .addGap(33, 33, 33)
+                        .addComponent(jCardOpAvanzadas, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
+                        .addGap(33, 33, 33)
+                        .addComponent(jCardFasores, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE))
+                    .addComponent(jPanelFooter, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(29, 29, 29))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanelSideMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addGap(55, 55, 55)
+                .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCardFasores, javax.swing.GroupLayout.DEFAULT_SIZE, 249, Short.MAX_VALUE)
+                    .addComponent(jCardFasores, javax.swing.GroupLayout.DEFAULT_SIZE, 261, Short.MAX_VALUE)
                     .addComponent(jCardOpAvanzadas, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addComponent(jCardOpBasicas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(99, Short.MAX_VALUE))
+                .addGap(20, 20, 20)
+                .addComponent(jPanelFooter, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         setSize(new java.awt.Dimension(714, 442));
@@ -215,7 +256,8 @@ public class interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonVolverActionPerformed
 
     private void jButtonOpBasicasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonOpBasicasActionPerformed
-        // TODO add your handling code here:
+        this.dispose();
+        new OpBasicasGUI().setVisible(true);
     }//GEN-LAST:event_jButtonOpBasicasActionPerformed
 
     /**
@@ -235,20 +277,21 @@ public class interfaz extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(interfaz.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(interfaz.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(interfaz.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(interfaz.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new interfaz().setVisible(true);
+                new MainGUI().setVisible(true);
             }
         });
     }
@@ -262,8 +305,11 @@ public class interfaz extends javax.swing.JFrame {
     private javax.swing.JButton jCardFasores;
     private javax.swing.JButton jCardOpAvanzadas;
     private javax.swing.JButton jCardOpBasicas;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanelAppTitle;
     private javax.swing.JPanel jPanelAppTitle1;
+    private javax.swing.JPanel jPanelFooter;
     private javax.swing.JPanel jPanelSideMenu;
     // End of variables declaration//GEN-END:variables
 }
