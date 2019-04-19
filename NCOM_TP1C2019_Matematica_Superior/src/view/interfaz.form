@@ -38,11 +38,11 @@
           <Group type="102" alignment="0" attributes="0">
               <Component id="jPanelSideMenu" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="46" max="32767" attributes="0"/>
-              <Component id="jButton2" pref="119" max="32767" attributes="0"/>
+              <Component id="jCardOpBasicas" pref="119" max="32767" attributes="0"/>
               <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-              <Component id="jButton4" pref="119" max="32767" attributes="0"/>
+              <Component id="jCardOpAvanzadas" pref="119" max="32767" attributes="0"/>
               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-              <Component id="jButton3" pref="119" max="32767" attributes="0"/>
+              <Component id="jCardFasores" pref="119" max="32767" attributes="0"/>
               <EmptySpace pref="45" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -53,9 +53,9 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jButton3" alignment="3" pref="249" max="32767" attributes="0"/>
-                  <Component id="jButton4" alignment="3" pref="0" max="32767" attributes="0"/>
-                  <Component id="jButton2" alignment="3" max="32767" attributes="0"/>
+                  <Component id="jCardFasores" alignment="3" pref="249" max="32767" attributes="0"/>
+                  <Component id="jCardOpAvanzadas" alignment="3" pref="0" max="32767" attributes="0"/>
+                  <Component id="jCardOpBasicas" alignment="3" max="32767" attributes="0"/>
               </Group>
               <EmptySpace pref="99" max="32767" attributes="0"/>
           </Group>
@@ -279,7 +279,7 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JButton" name="jButton2">
+    <Component class="javax.swing.JButton" name="jCardOpBasicas">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/view/images/Op B&#xe1;sicas.png"/>
@@ -290,7 +290,7 @@
         <Property name="horizontalTextPosition" type="int" value="0"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton3">
+    <Component class="javax.swing.JButton" name="jCardFasores">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/view/images/Fasores.png"/>
@@ -301,7 +301,7 @@
         <Property name="horizontalTextPosition" type="int" value="0"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton4">
+    <Component class="javax.swing.JButton" name="jCardOpAvanzadas">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/view/images/Op Avanzadas.png"/>

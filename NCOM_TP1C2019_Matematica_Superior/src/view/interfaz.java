@@ -35,9 +35,9 @@ public class interfaz extends javax.swing.JFrame {
         jButtonOpBasicas = new javax.swing.JButton();
         jButtonOpAvanzadas = new javax.swing.JButton();
         jButtonFasores = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        jCardOpBasicas = new javax.swing.JButton();
+        jCardFasores = new javax.swing.JButton();
+        jCardOpAvanzadas = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Inicio");
@@ -168,17 +168,17 @@ public class interfaz extends javax.swing.JFrame {
         jPanelAppTitle.getAccessibleContext().setAccessibleName("titleApp");
         jPanelAppTitle.getAccessibleContext().setAccessibleDescription("Titulo de la App en menu");
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/Op Básicas.png"))); // NOI18N
-        jButton2.setBorder(null);
-        jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jCardOpBasicas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/Op Básicas.png"))); // NOI18N
+        jCardOpBasicas.setBorder(null);
+        jCardOpBasicas.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/Fasores.png"))); // NOI18N
-        jButton3.setBorder(null);
-        jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jCardFasores.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/Fasores.png"))); // NOI18N
+        jCardFasores.setBorder(null);
+        jCardFasores.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/Op Avanzadas.png"))); // NOI18N
-        jButton4.setBorder(null);
-        jButton4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jCardOpAvanzadas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/Op Avanzadas.png"))); // NOI18N
+        jCardOpAvanzadas.setBorder(null);
+        jCardOpAvanzadas.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -187,11 +187,11 @@ public class interfaz extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanelSideMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 119, Short.MAX_VALUE)
+                .addComponent(jCardOpBasicas, javax.swing.GroupLayout.PREFERRED_SIZE, 119, Short.MAX_VALUE)
                 .addGap(34, 34, 34)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 119, Short.MAX_VALUE)
+                .addComponent(jCardOpAvanzadas, javax.swing.GroupLayout.PREFERRED_SIZE, 119, Short.MAX_VALUE)
                 .addGap(33, 33, 33)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 119, Short.MAX_VALUE)
+                .addComponent(jCardFasores, javax.swing.GroupLayout.PREFERRED_SIZE, 119, Short.MAX_VALUE)
                 .addContainerGap(45, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -200,9 +200,9 @@ public class interfaz extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(55, 55, 55)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 249, Short.MAX_VALUE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jCardFasores, javax.swing.GroupLayout.DEFAULT_SIZE, 249, Short.MAX_VALUE)
+                    .addComponent(jCardOpAvanzadas, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jCardOpBasicas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(99, Short.MAX_VALUE))
         );
 
@@ -255,13 +255,13 @@ public class interfaz extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private java.awt.Label appTitle;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButtonFasores;
     private javax.swing.JButton jButtonOpAvanzadas;
     private javax.swing.JButton jButtonOpBasicas;
     private javax.swing.JButton jButtonVolver;
+    private javax.swing.JButton jCardFasores;
+    private javax.swing.JButton jCardOpAvanzadas;
+    private javax.swing.JButton jCardOpBasicas;
     private javax.swing.JPanel jPanelAppTitle;
     private javax.swing.JPanel jPanelAppTitle1;
     private javax.swing.JPanel jPanelSideMenu;
