@@ -103,6 +103,7 @@ public class OpBasicasGUI extends javax.swing.JFrame {
         jButtonOpBasicas.setText("   Operaciones Básicas");
         jButtonOpBasicas.setBorder(null);
         jButtonOpBasicas.setBorderPainted(false);
+        jButtonOpBasicas.setContentAreaFilled(false);
         jButtonOpBasicas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButtonOpBasicas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -117,6 +118,7 @@ public class OpBasicasGUI extends javax.swing.JFrame {
         jButtonOpAvanzadas.setText(" Operaciones Avanzadas");
         jButtonOpAvanzadas.setBorder(null);
         jButtonOpAvanzadas.setBorderPainted(false);
+        jButtonOpAvanzadas.setContentAreaFilled(false);
         jButtonOpAvanzadas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jButtonFasores.setBackground(new java.awt.Color(25, 33, 43));
@@ -126,6 +128,7 @@ public class OpBasicasGUI extends javax.swing.JFrame {
         jButtonFasores.setText("   Sumatoria de Fasores");
         jButtonFasores.setBorder(null);
         jButtonFasores.setBorderPainted(false);
+        jButtonFasores.setContentAreaFilled(false);
         jButtonFasores.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout jPanelSideMenuLayout = new javax.swing.GroupLayout(jPanelSideMenu);
