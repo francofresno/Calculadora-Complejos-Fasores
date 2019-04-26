@@ -51,9 +51,14 @@ public class ComplejoPolar {
         return this;
     }
     
-    public ComplejoPolar radicacionNatural(int indice) {
+    public ComplejoPolar raicesNEsimas( int indice ) {
         this.modulo = Math.pow(this.modulo,1/indice);
        // this.argumento = HAY MUCHAS SOLUCIONES, IMPLEMENTACION?;
+        return this;
+    }
+    
+    public ComplejoPolar raicesPrimitivas( int indice ) {
+        // Implementacion usando funcion obtenerMCD declarada abajo
         return this;
     }
     
@@ -83,6 +88,7 @@ public class ComplejoPolar {
         return this;
     }
     
+    // Funciones secundarias
     public double arreglarArgumento (double arg) {
         while (arg > (2 * Math.PI) || arg < 0) {
             if (arg > (2 * Math.PI)) {
@@ -101,5 +107,13 @@ public class ComplejoPolar {
     
     public double elArcotangenteDe (double re, double im) {
         return Math.atan(re/im);
+    }
+    
+    int obtenerMCD(int p, int q) {
+        if (q == 0){
+            return p;
+        }else{
+            return obtenerMCD(q, p % q);
+        }
     }
 }
