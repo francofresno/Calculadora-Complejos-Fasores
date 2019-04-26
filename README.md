@@ -5,3 +5,6 @@
 ## Iniciar 🏁
 
 - [Manual de Usuario y Documentación Técnica](http://bit.ly/TPmsGK30116)
+
+## Contribuidores
+Grupo: K3011_6
