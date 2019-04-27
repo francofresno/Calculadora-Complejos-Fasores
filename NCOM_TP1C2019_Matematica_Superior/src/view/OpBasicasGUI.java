@@ -35,6 +35,7 @@ public class OpBasicasGUI extends javax.swing.JFrame {
         jButtonOpBasicas = new javax.swing.JButton();
         jButtonOpAvanzadas = new javax.swing.JButton();
         jButtonFasores = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -120,6 +121,11 @@ public class OpBasicasGUI extends javax.swing.JFrame {
         jButtonOpAvanzadas.setBorderPainted(false);
         jButtonOpAvanzadas.setContentAreaFilled(false);
         jButtonOpAvanzadas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButtonOpAvanzadas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonOpAvanzadasActionPerformed(evt);
+            }
+        });
 
         jButtonFasores.setBackground(new java.awt.Color(25, 33, 43));
         jButtonFasores.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -130,6 +136,11 @@ public class OpBasicasGUI extends javax.swing.JFrame {
         jButtonFasores.setBorderPainted(false);
         jButtonFasores.setContentAreaFilled(false);
         jButtonFasores.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButtonFasores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonFasoresActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanelSideMenuLayout = new javax.swing.GroupLayout(jPanelSideMenu);
         jPanelSideMenu.setLayout(jPanelSideMenuLayout);
@@ -162,11 +173,16 @@ public class OpBasicasGUI extends javax.swing.JFrame {
                 .addComponent(jPanelAppTitle1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
+        jLabel1.setText("OpBasicas");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 643, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(365, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(229, 229, 229))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addComponent(jPanelSideMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -174,7 +190,10 @@ public class OpBasicasGUI extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 461, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(169, 169, 169)
+                .addComponent(jLabel1)
+                .addContainerGap(278, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanelSideMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -188,8 +207,19 @@ public class OpBasicasGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonVolverActionPerformed
 
     private void jButtonOpBasicasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonOpBasicasActionPerformed
-
+        this.dispose();
+        new OpBasicasGUI().setVisible(true);
     }//GEN-LAST:event_jButtonOpBasicasActionPerformed
+
+    private void jButtonOpAvanzadasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonOpAvanzadasActionPerformed
+        this.dispose();
+        new OpAvanzadasGUI().setVisible(true);
+    }//GEN-LAST:event_jButtonOpAvanzadasActionPerformed
+
+    private void jButtonFasoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFasoresActionPerformed
+        this.dispose();
+        new FasoresGUI().setVisible(true);
+    }//GEN-LAST:event_jButtonFasoresActionPerformed
 
     /**
      * @param args the command line arguments
@@ -233,6 +263,7 @@ public class OpBasicasGUI extends javax.swing.JFrame {
     private javax.swing.JButton jButtonOpAvanzadas;
     private javax.swing.JButton jButtonOpBasicas;
     private javax.swing.JButton jButtonVolver;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanelAppTitle;
     private javax.swing.JPanel jPanelAppTitle1;
     private javax.swing.JPanel jPanelSideMenu;

@@ -27,21 +27,199 @@ public class FasoresGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanelSideMenu = new javax.swing.JPanel();
+        jPanelAppTitle = new javax.swing.JPanel();
+        appTitle = new java.awt.Label();
+        jPanelAppTitle1 = new javax.swing.JPanel();
+        jButtonVolver = new javax.swing.JButton();
+        jButtonOpBasicas = new javax.swing.JButton();
+        jButtonOpAvanzadas = new javax.swing.JButton();
+        jButtonFasores = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanelSideMenu.setBackground(new java.awt.Color(25, 33, 43));
+        jPanelSideMenu.setToolTipText("");
+
+        jPanelAppTitle.setBackground(new java.awt.Color(38, 47, 61));
+        jPanelAppTitle.setToolTipText("");
+
+        appTitle.setAlignment(java.awt.Label.CENTER);
+        appTitle.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        appTitle.setForeground(new java.awt.Color(225, 232, 240));
+        appTitle.setText("NCOM APP");
+
+        javax.swing.GroupLayout jPanelAppTitleLayout = new javax.swing.GroupLayout(jPanelAppTitle);
+        jPanelAppTitle.setLayout(jPanelAppTitleLayout);
+        jPanelAppTitleLayout.setHorizontalGroup(
+            jPanelAppTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(appTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanelAppTitleLayout.setVerticalGroup(
+            jPanelAppTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelAppTitleLayout.createSequentialGroup()
+                .addComponent(appTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanelAppTitle1.setBackground(new java.awt.Color(38, 47, 61));
+        jPanelAppTitle1.setToolTipText("");
+
+        jButtonVolver.setBackground(new java.awt.Color(38, 47, 61));
+        jButtonVolver.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButtonVolver.setForeground(new java.awt.Color(225, 232, 240));
+        jButtonVolver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/Back Icon.png"))); // NOI18N
+        jButtonVolver.setText("Volver");
+        jButtonVolver.setBorder(null);
+        jButtonVolver.setBorderPainted(false);
+        jButtonVolver.setContentAreaFilled(false);
+        jButtonVolver.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButtonVolver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonVolverActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanelAppTitle1Layout = new javax.swing.GroupLayout(jPanelAppTitle1);
+        jPanelAppTitle1.setLayout(jPanelAppTitle1Layout);
+        jPanelAppTitle1Layout.setHorizontalGroup(
+            jPanelAppTitle1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelAppTitle1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButtonVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jPanelAppTitle1Layout.setVerticalGroup(
+            jPanelAppTitle1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelAppTitle1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButtonVolver, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jButtonOpBasicas.setBackground(new java.awt.Color(25, 33, 43));
+        jButtonOpBasicas.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButtonOpBasicas.setForeground(new java.awt.Color(225, 232, 240));
+        jButtonOpBasicas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/Plus Icon.png"))); // NOI18N
+        jButtonOpBasicas.setText("   Operaciones Básicas");
+        jButtonOpBasicas.setBorder(null);
+        jButtonOpBasicas.setBorderPainted(false);
+        jButtonOpBasicas.setContentAreaFilled(false);
+        jButtonOpBasicas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButtonOpBasicas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonOpBasicasActionPerformed(evt);
+            }
+        });
+
+        jButtonOpAvanzadas.setBackground(new java.awt.Color(25, 33, 43));
+        jButtonOpAvanzadas.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButtonOpAvanzadas.setForeground(new java.awt.Color(225, 232, 240));
+        jButtonOpAvanzadas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/Square Root Icon.png"))); // NOI18N
+        jButtonOpAvanzadas.setText(" Operaciones Avanzadas");
+        jButtonOpAvanzadas.setBorder(null);
+        jButtonOpAvanzadas.setBorderPainted(false);
+        jButtonOpAvanzadas.setContentAreaFilled(false);
+        jButtonOpAvanzadas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButtonOpAvanzadas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonOpAvanzadasActionPerformed(evt);
+            }
+        });
+
+        jButtonFasores.setBackground(new java.awt.Color(25, 33, 43));
+        jButtonFasores.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButtonFasores.setForeground(new java.awt.Color(225, 232, 240));
+        jButtonFasores.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/Fasores Icon.png"))); // NOI18N
+        jButtonFasores.setText("   Sumatoria de Fasores");
+        jButtonFasores.setBorder(null);
+        jButtonFasores.setBorderPainted(false);
+        jButtonFasores.setContentAreaFilled(false);
+        jButtonFasores.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButtonFasores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonFasoresActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanelSideMenuLayout = new javax.swing.GroupLayout(jPanelSideMenu);
+        jPanelSideMenu.setLayout(jPanelSideMenuLayout);
+        jPanelSideMenuLayout.setHorizontalGroup(
+            jPanelSideMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanelAppTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanelAppTitle1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelSideMenuLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanelSideMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButtonOpAvanzadas, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButtonFasores))
+                .addContainerGap())
+            .addGroup(jPanelSideMenuLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButtonOpBasicas)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanelSideMenuLayout.setVerticalGroup(
+            jPanelSideMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelSideMenuLayout.createSequentialGroup()
+                .addComponent(jPanelAppTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(42, 42, 42)
+                .addComponent(jButtonOpBasicas)
+                .addGap(18, 18, 18)
+                .addComponent(jButtonOpAvanzadas)
+                .addGap(18, 18, 18)
+                .addComponent(jButtonFasores)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 240, Short.MAX_VALUE)
+                .addComponent(jPanelAppTitle1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        jLabel1.setText("Fasores");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(400, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(203, 203, 203))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addComponent(jPanelSideMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 458, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(144, 144, 144)
+                .addComponent(jLabel1)
+                .addContainerGap(297, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jPanelSideMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVolverActionPerformed
+        this.dispose();
+        new MainGUI().setVisible(true);
+    }//GEN-LAST:event_jButtonVolverActionPerformed
+
+    private void jButtonOpBasicasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonOpBasicasActionPerformed
+        this.dispose();
+        new OpBasicasGUI().setVisible(true);
+    }//GEN-LAST:event_jButtonOpBasicasActionPerformed
+
+    private void jButtonOpAvanzadasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonOpAvanzadasActionPerformed
+        this.dispose();
+        new OpAvanzadasGUI().setVisible(true);
+    }//GEN-LAST:event_jButtonOpAvanzadasActionPerformed
+
+    private void jButtonFasoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFasoresActionPerformed
+        this.dispose();
+        new FasoresGUI().setVisible(true);
+    }//GEN-LAST:event_jButtonFasoresActionPerformed
 
     /**
      * @param args the command line arguments
@@ -82,5 +260,14 @@ public class FasoresGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private java.awt.Label appTitle;
+    private javax.swing.JButton jButtonFasores;
+    private javax.swing.JButton jButtonOpAvanzadas;
+    private javax.swing.JButton jButtonOpBasicas;
+    private javax.swing.JButton jButtonVolver;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanelAppTitle;
+    private javax.swing.JPanel jPanelAppTitle1;
+    private javax.swing.JPanel jPanelSideMenu;
     // End of variables declaration//GEN-END:variables
 }

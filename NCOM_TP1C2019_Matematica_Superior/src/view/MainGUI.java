@@ -30,6 +30,12 @@ public class MainGUI extends javax.swing.JFrame {
         jPanelFooter = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jButtonGithub1 = new javax.swing.JButton();
+        jButtonGithub2 = new javax.swing.JButton();
+        jButtonGithub3 = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
         jPanelSideMenu = new javax.swing.JPanel();
         jPanelAppTitle = new javax.swing.JPanel();
         appTitle = new java.awt.Label();
@@ -56,16 +62,66 @@ public class MainGUI extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/logo utn.png"))); // NOI18N
 
+        jLabel4.setForeground(new java.awt.Color(225, 232, 240));
+        jLabel4.setText("Santiago Chejolan");
+
+        jLabel5.setForeground(new java.awt.Color(225, 232, 240));
+        jLabel5.setText("Santiago Aspres");
+
+        jButtonGithub1.setForeground(new java.awt.Color(31, 103, 166));
+        jButtonGithub1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/Github Icon.png"))); // NOI18N
+        jButtonGithub1.setBorder(null);
+        jButtonGithub1.setContentAreaFilled(false);
+        jButtonGithub1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonGithub1ActionPerformed(evt);
+            }
+        });
+
+        jButtonGithub2.setForeground(new java.awt.Color(31, 103, 166));
+        jButtonGithub2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/Github Icon.png"))); // NOI18N
+        jButtonGithub2.setBorder(null);
+        jButtonGithub2.setContentAreaFilled(false);
+        jButtonGithub2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonGithub2ActionPerformed(evt);
+            }
+        });
+
+        jButtonGithub3.setForeground(new java.awt.Color(31, 103, 166));
+        jButtonGithub3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/Github Icon.png"))); // NOI18N
+        jButtonGithub3.setBorder(null);
+        jButtonGithub3.setContentAreaFilled(false);
+        jButtonGithub3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonGithub3ActionPerformed(evt);
+            }
+        });
+
+        jLabel6.setForeground(new java.awt.Color(225, 232, 240));
+        jLabel6.setText("Franco Fresno");
+
         javax.swing.GroupLayout jPanelFooterLayout = new javax.swing.GroupLayout(jPanelFooter);
         jPanelFooter.setLayout(jPanelFooterLayout);
         jPanelFooterLayout.setHorizontalGroup(
             jPanelFooterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelFooterLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelFooterLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(24, 24, 24)
+                .addGroup(jPanelFooterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(jPanelFooterLayout.createSequentialGroup()
+                        .addComponent(jLabel6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonGithub1))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelFooterLayout.createSequentialGroup()
+                        .addComponent(jLabel5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonGithub3))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelFooterLayout.createSequentialGroup()
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonGithub2)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addContainerGap())
         );
@@ -74,9 +130,26 @@ public class MainGUI extends javax.swing.JFrame {
             .addGroup(jPanelFooterLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelFooterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelFooterLayout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanelFooterLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanelFooterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanelFooterLayout.createSequentialGroup()
+                                .addGroup(jPanelFooterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jButtonGithub1, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel6))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel4))
+                            .addComponent(jButtonGithub2, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanelFooterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel5)
+                            .addComponent(jButtonGithub3, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(5, 5, 5))))
         );
 
         jPanelSideMenu.setBackground(new java.awt.Color(25, 33, 43));
@@ -260,9 +333,9 @@ public class MainGUI extends javax.swing.JFrame {
                 .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jCardOpBasicas, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE)
+                        .addComponent(jCardOpBasicas, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
                         .addGap(33, 33, 33)
-                        .addComponent(jCardOpAvanzadas, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
+                        .addComponent(jCardOpAvanzadas, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE)
                         .addGap(33, 33, 33)
                         .addComponent(jCardFasores, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE))
                     .addComponent(jPanelFooter, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -274,7 +347,7 @@ public class MainGUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCardFasores, javax.swing.GroupLayout.DEFAULT_SIZE, 261, Short.MAX_VALUE)
+                    .addComponent(jCardFasores, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
                     .addComponent(jCardOpAvanzadas, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addComponent(jCardOpBasicas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(20, 20, 20)
@@ -319,6 +392,36 @@ public class MainGUI extends javax.swing.JFrame {
         new FasoresGUI().setVisible(true);
     }//GEN-LAST:event_jCardFasoresActionPerformed
 
+    private void jButtonGithub1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGithub1ActionPerformed
+       try { 
+         String url = "https://github.com/francofresno";
+         java.awt.Desktop.getDesktop().browse(java.net.URI.create(url));
+       }
+       catch (java.io.IOException e) {
+           System.out.println(e.getMessage());
+       }
+    }//GEN-LAST:event_jButtonGithub1ActionPerformed
+
+    private void jButtonGithub2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGithub2ActionPerformed
+       try { 
+         String url = "https://github.com/smchejolan";
+         java.awt.Desktop.getDesktop().browse(java.net.URI.create(url));
+       }
+       catch (java.io.IOException e) {
+           System.out.println(e.getMessage());
+       }
+    }//GEN-LAST:event_jButtonGithub2ActionPerformed
+
+    private void jButtonGithub3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGithub3ActionPerformed
+       try { 
+         String url = "https://github.com/SantiagoAspres";
+         java.awt.Desktop.getDesktop().browse(java.net.URI.create(url));
+       }
+       catch (java.io.IOException e) {
+           System.out.println(e.getMessage());
+       }
+    }//GEN-LAST:event_jButtonGithub3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -358,6 +461,9 @@ public class MainGUI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private java.awt.Label appTitle;
     private javax.swing.JButton jButtonFasores;
+    private javax.swing.JButton jButtonGithub1;
+    private javax.swing.JButton jButtonGithub2;
+    private javax.swing.JButton jButtonGithub3;
     private javax.swing.JButton jButtonOpAvanzadas;
     private javax.swing.JButton jButtonOpBasicas;
     private javax.swing.JButton jButtonVolver;
@@ -366,6 +472,9 @@ public class MainGUI extends javax.swing.JFrame {
     private javax.swing.JButton jCardOpBasicas;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanelAppTitle;
     private javax.swing.JPanel jPanelAppTitle1;
     private javax.swing.JPanel jPanelFooter;
