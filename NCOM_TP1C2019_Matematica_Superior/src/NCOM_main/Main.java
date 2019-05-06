@@ -2,6 +2,7 @@ package NCOM_main;
 
 import model.ComplejoBinomica;
 import model.ComplejoPolar;
+import view.MainGUI;
 
 /**
  *
@@ -10,7 +11,7 @@ import model.ComplejoPolar;
 public class Main {
     public static void main(String[] args) {
         
-        // PRUEBAS
+        /*/ PRUEBAS
         ComplejoPolar a = new ComplejoPolar();
         ComplejoBinomica b = new ComplejoBinomica(1,-1);
         
@@ -19,8 +20,11 @@ public class Main {
         b=b.polarABinomica(a);
                 
         System.out.println(b.componenteReal);
-        System.out.println(b.componenteImaginaria);
+        System.out.println(b.componenteImaginaria);*/
+        
+        new MainGUI().setVisible(true);
 
+           
     }
 
 }
