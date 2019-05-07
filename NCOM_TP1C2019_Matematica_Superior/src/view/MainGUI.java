@@ -51,7 +51,9 @@ public class MainGUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Inicio");
         setBackground(new java.awt.Color(225, 232, 240));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setPreferredSize(new java.awt.Dimension(1366, 768));
+        setResizable(false);
         setSize(new java.awt.Dimension(1366, 768));
 
         jPanelFooter.setBackground(new java.awt.Color(31, 103, 166));

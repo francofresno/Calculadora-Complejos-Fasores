@@ -50,6 +50,8 @@ public class OpBasicasGUI extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Operaciones basicas con Números Complejos");
+        setResizable(false);
 
         jPanelSideMenu.setBackground(new java.awt.Color(25, 33, 43));
         jPanelSideMenu.setToolTipText("");
@@ -319,6 +321,7 @@ public class OpBasicasGUI extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVolverActionPerformed
