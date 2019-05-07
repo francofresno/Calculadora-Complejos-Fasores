@@ -40,14 +40,14 @@ public class OpBasicasGUI extends javax.swing.JFrame {
         jButtonFasores = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jButton5 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -203,9 +203,11 @@ public class OpBasicasGUI extends javax.swing.JFrame {
             }
         });
 
-        jTextField3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-
+        jLabel2.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("=");
+
+        jLabel4.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
 
         jButton1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jButton1.setText("SUMA");
@@ -239,54 +241,77 @@ public class OpBasicasGUI extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
+        jButton5.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        jButton5.setText("Transformar resultado");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanelSideMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(6, 6, 6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4)))
-                    .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(26, 26, 26)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(109, 109, 109))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(90, 90, 90)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addContainerGap())))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
-                        .addComponent(jLabel2))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18))
+                        .addGap(26, 26, 26)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(28, 28, 28)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanelSideMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addGap(89, 89, 89)
+                .addGap(16, 16, 16)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4))
-                .addGap(47, 47, 47)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(47, 47, 47)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(80, 80, 80)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(132, 132, 132)
+                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -329,62 +354,427 @@ public class OpBasicasGUI extends javax.swing.JFrame {
         jLabel4.setText("+");
         num1 = jTextField1.getText();
         num2 = jTextField2.getText();
-        if (num1.charAt(0)=='(' && num2.charAt(0)=='('){
-            ComplejoBinomica a,b,suma;            
-            a=getNumeroBinarioDeTexto(num1);
-            b=getNumeroBinarioDeTexto(num2);
-            suma = a.suma(b);  
-            resultado = resultadoBinomica(suma);
-            jTextField3.setText(resultado);
+        FlagSyntax flagSyntax = new FlagSyntax();
+        switch (num1.charAt(0)){
+            case '(' : {
+                switch (num2.charAt(0)){
+                    case '(' :{
+                        ComplejoBinomica a,b,suma;            
+                        a=getNumeroBinomicoDeTexto(num1,flagSyntax);
+                        b=getNumeroBinomicoDeTexto(num2,flagSyntax);
+                        if (flagSyntax.flag==1){
+                            suma = a.suma(b);  
+                            resultado = resultadoBinomica(suma);
+                             jLabel1.setText(resultado);
+                        }else{
+                            jLabel1.setText("SYNTAX ERROR");
+                        }
+                         break;
+                    }
+                    case '[' : {
+                        ComplejoBinomica a,suma,b=new ComplejoBinomica();
+                        ComplejoPolar bp;
+                        a=getNumeroBinomicoDeTexto(num1,flagSyntax);
+                        bp=getNumeroPolarDeTexto(num2,flagSyntax);
+                        b=b.polarABinomica(bp);
+                        if (flagSyntax.flag==1){
+                            suma = a.suma(b);  
+                            resultado = resultadoBinomica(suma);
+                            jLabel1.setText(resultado);
+                        }else{
+                            jLabel1.setText("SYNTAX ERROR");
+                        }
+                        break;
+                    }
+                    default : {
+                        jLabel1.setText("SYNTAX ERROR");
+                        break;
+                    }
+                }
+                break;
+            }
+        case '[':{
+                  switch(num2.charAt(0)){
+                  case '(' :{
+                        ComplejoPolar ap,sumaPolar= new ComplejoPolar();
+                        ComplejoBinomica ab = new ComplejoBinomica(),bb,sumaBin;            
+                        ap=getNumeroPolarDeTexto(num1,flagSyntax);
+                        bb=getNumeroBinomicoDeTexto(num2,flagSyntax);
+                        if (flagSyntax.flag==1){
+                            ab=ab.polarABinomica(ap);
+                            sumaBin = ab.suma(bb);  
+                            sumaPolar = sumaPolar.binomicaAPolar(sumaBin);
+                            resultado = resultadoPolar(sumaPolar);
+                            jLabel1.setText(resultado);
+                        }else{
+                            jLabel1.setText("SYNTAX ERROR");
+                        }
+                        break;
+                    }
+                    case '[' : {
+                        ComplejoPolar ap,bp,sumaPolar= new ComplejoPolar();
+                        ComplejoBinomica ab = new ComplejoBinomica(),bb= new ComplejoBinomica(),sumaBin;            
+                        ap=getNumeroPolarDeTexto(num1,flagSyntax);
+                        bp=getNumeroPolarDeTexto(num2,flagSyntax);
+                        if (flagSyntax.flag==1){
+                            ab=ab.polarABinomica(ap);
+                            bb=bb.polarABinomica(bp);
+                            sumaBin = ab.suma(bb);  
+                            sumaPolar = sumaPolar.binomicaAPolar(sumaBin);
+                            resultado = resultadoPolar(sumaPolar);
+                            jLabel1.setText(resultado);
+                        }else{
+                            jLabel1.setText("SYNTAX ERROR");
+                        }
+                        break;
+                    }
+                    default : {
+                        jLabel1.setText("SYNTAX ERROR");
+                        break;
+                    }
+                }
+                break;    
         }
-        if (num1.charAt(0)=='[' && num2.charAt(0)=='['){
-            ComplejoPolar ap,bp,sumaPolar= new ComplejoPolar();
-            ComplejoBinomica ab = new ComplejoBinomica(),bb= new ComplejoBinomica(),sumaBin;            
-            ap=getNumeroPolarDeTexto(num1);
-            bp=getNumeroPolarDeTexto(num2);
-            ab=ab.polarABinomica(ap);
-            bb=bb.polarABinomica(bp);
-            sumaBin = ab.suma(bb);  
-            sumaPolar = sumaPolar.binomicaAPolar(sumaBin);
-            resultado = resultadoPolar(sumaPolar);
-            jTextField3.setText(resultado);
-        }
-        else {
-            jTextField3.setText("SYNTAX ERROR");
+        default : jLabel1.setText("SYNTAX ERROR");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-          jLabel4.setText("-");
+        jLabel4.setText("-");
+        String num1,num2,resultado;
+        num1 = jTextField1.getText();
+        num2 = jTextField2.getText();
+        FlagSyntax flagSyntax = new FlagSyntax();
+        switch (num1.charAt(0)){
+            case '(' : {
+                switch (num2.charAt(0)){
+                    case '(' :{
+                        ComplejoBinomica a,b,resta;            
+                        a=getNumeroBinomicoDeTexto(num1,flagSyntax);
+                        b=getNumeroBinomicoDeTexto(num2,flagSyntax);
+                        if (flagSyntax.flag==1){
+                            resta = a.resta(b);  
+                            resultado = resultadoBinomica(resta);
+                             jLabel1.setText(resultado);
+                        }else{
+                            jLabel1.setText("SYNTAX ERROR");
+                        }
+                         break;
+                    }
+                    case '[' : {
+                        ComplejoBinomica a,resta,b=new ComplejoBinomica();
+                        ComplejoPolar bp;
+                        a=getNumeroBinomicoDeTexto(num1,flagSyntax);
+                        bp=getNumeroPolarDeTexto(num2,flagSyntax);
+                        b=b.polarABinomica(bp);
+                        if (flagSyntax.flag==1){
+                            resta = a.resta(b);  
+                            resultado = resultadoBinomica(resta);
+                            jLabel1.setText(resultado);
+                        }else{
+                            jLabel1.setText("SYNTAX ERROR");
+                        }
+                        break;
+                    }
+                    default : {
+                        jLabel1.setText("SYNTAX ERROR");
+                        break;
+                    }
+                }
+                break;
+            }
+        case '[':{
+                  switch(num2.charAt(0)){
+                  case '(' :{
+                        ComplejoPolar ap,restaPolar= new ComplejoPolar();
+                        ComplejoBinomica ab = new ComplejoBinomica(),bb,restaBin;            
+                        ap=getNumeroPolarDeTexto(num1,flagSyntax);
+                        bb=getNumeroBinomicoDeTexto(num2,flagSyntax);
+                        if (flagSyntax.flag==1){
+                            ab=ab.polarABinomica(ap);
+                            restaBin = ab.suma(bb);  
+                            restaPolar = restaPolar.binomicaAPolar(restaBin);
+                            resultado = resultadoPolar(restaPolar);
+                            jLabel1.setText(resultado);
+                        }else{
+                            jLabel1.setText("SYNTAX ERROR");
+                        }
+                        break;
+                    }
+                    case '[' : {
+                        ComplejoPolar ap,bp,restaPolar= new ComplejoPolar();
+                        ComplejoBinomica ab = new ComplejoBinomica(),bb= new ComplejoBinomica(),restaBin;            
+                        ap=getNumeroPolarDeTexto(num1,flagSyntax);
+                        bp=getNumeroPolarDeTexto(num2,flagSyntax);
+                        if (flagSyntax.flag==1){
+                            ab=ab.polarABinomica(ap);
+                            bb=bb.polarABinomica(bp);
+                            restaBin = ab.suma(bb);  
+                            restaPolar = restaPolar.binomicaAPolar(restaBin);
+                            resultado = resultadoPolar(restaPolar);
+                            jLabel1.setText(resultado);
+                        }else{
+                            jLabel1.setText("SYNTAX ERROR");
+                        }
+                        break;
+                    }
+                    default : {
+                        jLabel1.setText("SYNTAX ERROR");
+                        break;
+                    }
+                }
+                break;    
+        }
+        default : jLabel1.setText("SYNTAX ERROR");
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-         jLabel4.setText("*");
+        jLabel4.setText("*");
+        String num1,num2,resultado;
+        num1 = jTextField1.getText();
+        num2 = jTextField2.getText();
+        FlagSyntax flagSyntax = new FlagSyntax();
+        switch (num1.charAt(0)){
+            case '(' : {
+                switch (num2.charAt(0)){
+                    case '(' :{
+                        ComplejoBinomica ab,bb,productoBinomico=new ComplejoBinomica();
+                        ComplejoPolar ap=new ComplejoPolar(),bp=new ComplejoPolar(),productoPolar;
+                        ab=getNumeroBinomicoDeTexto(num1,flagSyntax);
+                        bb=getNumeroBinomicoDeTexto(num2,flagSyntax);
+                        if (flagSyntax.flag==1){
+                            ap=ap.binomicaAPolar(ab);
+                            bp=bp.binomicaAPolar(bb);
+                            productoPolar = ap.cociente(bp);
+                            productoBinomico = productoBinomico.polarABinomica(productoPolar);
+                            resultado = resultadoBinomica(productoBinomico);
+                             jLabel1.setText(resultado);
+                        }else{
+                            jLabel1.setText("SYNTAX ERROR");
+                        }
+                         break;
+                    }
+                    case '[' : {
+                        ComplejoBinomica ab,productoBinomico=new ComplejoBinomica();
+                        ComplejoPolar ap=new ComplejoPolar(),bp,productoPolar;
+                        ab=getNumeroBinomicoDeTexto(num1,flagSyntax);
+                        bp=getNumeroPolarDeTexto(num2,flagSyntax);
+                        if (flagSyntax.flag==1){
+                            ap=ap.binomicaAPolar(ab);
+                            productoPolar = ap.cociente(bp);
+                            productoBinomico = productoBinomico.polarABinomica(productoPolar);
+                            resultado = resultadoBinomica(productoBinomico);
+                             jLabel1.setText(resultado);
+                        }else{
+                            jLabel1.setText("SYNTAX ERROR");
+                        }
+                         break;
+                    }
+                    default : {
+                        jLabel1.setText("SYNTAX ERROR");
+                        break;
+                    }
+                }
+                break;
+            }
+        case '[':{
+                  switch(num2.charAt(0)){
+                  case '(' :{
+                        ComplejoPolar ap,bp=new ComplejoPolar(),producto;
+                        ComplejoBinomica bb;            
+                        ap=getNumeroPolarDeTexto(num1,flagSyntax);
+                        bb=getNumeroBinomicoDeTexto(num2,flagSyntax);
+                        if (flagSyntax.flag==1){
+                            bp=bp.binomicaAPolar(bb);
+                            producto = ap.cociente(bp);  
+                            resultado = resultadoPolar(producto);
+                            jLabel1.setText(resultado);
+                        }else{
+                            jLabel1.setText("SYNTAX ERROR");
+                        }
+                        break;
+                    }
+                    case '[' : {
+                        ComplejoPolar a,b,producto;            
+                        a=getNumeroPolarDeTexto(num1,flagSyntax);
+                        b=getNumeroPolarDeTexto(num2,flagSyntax);
+                        if (flagSyntax.flag==1){
+                            producto = a.cociente(b);  
+                            resultado = resultadoPolar(producto);
+                             jLabel1.setText(resultado);
+                        }else{
+                            jLabel1.setText("SYNTAX ERROR");
+                        }
+                         break;
+                    }
+                    default : {
+                        jLabel1.setText("SYNTAX ERROR");
+                        break;
+                    }
+                }
+                break;    
+        }
+        default : jLabel1.setText("SYNTAX ERROR");
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-         jLabel4.setText("/");
+        jLabel4.setText("/");
+        String num1,num2,resultado;
+        num1 = jTextField1.getText();
+        num2 = jTextField2.getText();
+        FlagSyntax flagSyntax = new FlagSyntax();
+        switch (num1.charAt(0)){
+            case '(' : {
+                switch (num2.charAt(0)){
+                    case '(' :{
+                        ComplejoBinomica ab,bb,cocienteBinomico=new ComplejoBinomica();
+                        ComplejoPolar ap=new ComplejoPolar(),bp=new ComplejoPolar(),cocientePolar;
+                        ab=getNumeroBinomicoDeTexto(num1,flagSyntax);
+                        bb=getNumeroBinomicoDeTexto(num2,flagSyntax);
+                        if (flagSyntax.flag==1){
+                            ap=ap.binomicaAPolar(ab);
+                            bp=bp.binomicaAPolar(bb);
+                            cocientePolar = ap.cociente(bp);
+                            cocienteBinomico = cocienteBinomico.polarABinomica(cocientePolar);
+                            resultado = resultadoBinomica(cocienteBinomico);
+                             jLabel1.setText(resultado);
+                        }else{
+                            jLabel1.setText("SYNTAX ERROR");
+                        }
+                         break;
+                    }
+                    case '[' : {
+                        ComplejoBinomica ab,cocienteBinomico=new ComplejoBinomica();
+                        ComplejoPolar ap=new ComplejoPolar(),bp,cocientePolar;
+                        ab=getNumeroBinomicoDeTexto(num1,flagSyntax);
+                        bp=getNumeroPolarDeTexto(num2,flagSyntax);
+                        if (flagSyntax.flag==1){
+                            ap=ap.binomicaAPolar(ab);
+                            cocientePolar = ap.cociente(bp);
+                            cocienteBinomico = cocienteBinomico.polarABinomica(cocientePolar);
+                            resultado = resultadoBinomica(cocienteBinomico);
+                             jLabel1.setText(resultado);
+                        }else{
+                            jLabel1.setText("SYNTAX ERROR");
+                        }
+                         break;
+                    }
+                    default : {
+                        jLabel1.setText("SYNTAX ERROR");
+                        break;
+                    }
+                }
+                break;
+            }
+        case '[':{
+                  switch(num2.charAt(0)){
+                  case '(' :{
+                        ComplejoPolar ap,bp=new ComplejoPolar(),cociente;
+                        ComplejoBinomica bb;            
+                        ap=getNumeroPolarDeTexto(num1,flagSyntax);
+                        bb=getNumeroBinomicoDeTexto(num2,flagSyntax);
+                        if (flagSyntax.flag==1){
+                            bp=bp.binomicaAPolar(bb);
+                            cociente = ap.cociente(bp);  
+                            resultado = resultadoPolar(cociente);
+                            jLabel1.setText(resultado);
+                        }else{
+                            jLabel1.setText("SYNTAX ERROR");
+                        }
+                        break;
+                    }
+                    case '[' : {
+                        ComplejoPolar a,b,cociente;            
+                        a=getNumeroPolarDeTexto(num1,flagSyntax);
+                        b=getNumeroPolarDeTexto(num2,flagSyntax);
+                        if (flagSyntax.flag==1){
+                            cociente = a.cociente(b);  
+                            resultado = resultadoPolar(cociente);
+                             jLabel1.setText(resultado);
+                        }else{
+                            jLabel1.setText("SYNTAX ERROR");
+                        }
+                         break;
+                    }
+                    default : {
+                        jLabel1.setText("SYNTAX ERROR");
+                        break;
+                    }
+                }
+                break;    
+        }
+        default : jLabel1.setText("SYNTAX ERROR");
+        }         
     }//GEN-LAST:event_jButton4ActionPerformed
 
-    private ComplejoPolar getNumeroPolarDeTexto (String textfield){
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+       String resultado=jLabel1.getText();
+       FlagSyntax flagSyntax = new FlagSyntax();
+       switch(resultado.charAt(0)){
+           case '(':  { 
+               ComplejoBinomica old = getNumeroBinomicoDeTexto(resultado,flagSyntax);
+               ComplejoPolar nuevo = new ComplejoPolar();
+               nuevo= nuevo.binomicaAPolar(old);
+               resultado = resultadoPolar(nuevo); 
+               jLabel1.setText(resultado);
+               break;
+           }
+           case '[' : {
+               ComplejoPolar old = getNumeroPolarDeTexto (resultado,flagSyntax);
+               ComplejoBinomica nuevo = new ComplejoBinomica ();
+               nuevo = nuevo.polarABinomica(old);
+               resultado = resultadoBinomica(nuevo);
+               jLabel1.setText(resultado);
+               break;
+           }
+       }        
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private ComplejoPolar getNumeroPolarDeTexto (String textfield,FlagSyntax flagSyntax){
         ComplejoPolar numeroComplejo=new ComplejoPolar();
-        String a,b;
-        int comaPos = textfield.indexOf(';');
-        a=textfield.substring(1,comaPos);
-        b=textfield.substring(comaPos+1, textfield.length()-1);
-        numeroComplejo.modulo = Float.parseFloat(a);
-        numeroComplejo.argumento = Float.parseFloat(b);
+        String a="0",b="0";
+        int comaPos=0;
+        try{
+            comaPos= textfield.indexOf(';');
+            a=textfield.substring(1,comaPos);
+            b=textfield.substring(comaPos+1, textfield.length()-1);
+        }catch(StringIndexOutOfBoundsException  e){
+            flagSyntax.flag=0;
+        }        
+        if (textfield.charAt(textfield.length()-1)!=']'){
+            flagSyntax.flag=0;
+        }
+        try{
+            numeroComplejo.modulo = Double.parseDouble(a);
+            numeroComplejo.argumento = Double.parseDouble(b);
+        }catch(NumberFormatException e){
+            flagSyntax.flag=0;
+        }
         return numeroComplejo;
     } 
     
-    private ComplejoBinomica getNumeroBinarioDeTexto (String textfield){
+    private ComplejoBinomica getNumeroBinomicoDeTexto (String textfield,FlagSyntax flagSyntax){
         ComplejoBinomica numeroComplejo=new ComplejoBinomica();
-        String a,b;
-        int comaPos = textfield.indexOf(',');
-        a=textfield.substring(1,comaPos);
-        b=textfield.substring(comaPos+1, textfield.length()-1);
-        numeroComplejo.componenteReal = Float.parseFloat(a);
-        numeroComplejo.componenteImaginaria = Float.parseFloat(b);
+        String a="0",b="0";
+        int comaPos=0;
+        try{
+            comaPos= textfield.indexOf(',');
+            a=textfield.substring(1,comaPos);
+            b=textfield.substring(comaPos+1, textfield.length()-1);
+        }catch(StringIndexOutOfBoundsException  e){
+            flagSyntax.flag=0;
+        }        
+        if (textfield.charAt(textfield.length()-1)!=')'){
+           
+        }
+        try{
+            numeroComplejo.componenteReal = Double.parseDouble(a);             
+            numeroComplejo.componenteImaginaria = Double.parseDouble(b);
+        }catch(NumberFormatException e){
+             flagSyntax.flag=0;
+        }
         return numeroComplejo;
     }
    
@@ -449,24 +839,31 @@ public class OpBasicasGUI extends javax.swing.JFrame {
         });
     }
 
+    private class FlagSyntax{
+       int flag;
+       FlagSyntax(){
+           flag=1;
+       }
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private java.awt.Label appTitle;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButtonFasores;
     private javax.swing.JButton jButtonOpAvanzadas;
     private javax.swing.JButton jButtonOpBasicas;
     private javax.swing.JButton jButtonVolver;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanelAppTitle;
     private javax.swing.JPanel jPanelAppTitle1;
     private javax.swing.JPanel jPanelSideMenu;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     // End of variables declaration//GEN-END:variables
 }
