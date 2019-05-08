@@ -10,16 +10,12 @@ public class Fasores extends ComplejoPolar{
         this.amplitud = 0;
         this.fase = 0;
         this.frecuencia = 0;
-        this.argumento = 0;
-        this.modulo = 0;
     }
     
     public Fasores(double amp, double fase, double frec) {
         this.amplitud = amp;
         this.fase = fase;
         this.frecuencia = frec;
-        this.argumento = 0;
-        this.modulo = 0;
     }
     
     // 2. Funciones set/get
