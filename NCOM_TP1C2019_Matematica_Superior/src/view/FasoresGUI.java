@@ -35,7 +35,12 @@ public class FasoresGUI extends javax.swing.JFrame {
         jButtonOpBasicas = new javax.swing.JButton();
         jButtonOpAvanzadas = new javax.swing.JButton();
         jButtonFasores = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        jLabelIgual = new javax.swing.JLabel();
+        jLabelResultado = new javax.swing.JLabel();
+        jTextFieldComplejo1 = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        jTextFieldComplejo2 = new javax.swing.JTextField();
+        jButtonSumaFasores = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -173,29 +178,84 @@ public class FasoresGUI extends javax.swing.JFrame {
                 .addComponent(jPanelAppTitle1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jLabel1.setText("Fasores");
+        jLabelIgual.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabelIgual.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelIgual.setText("=");
+
+        jLabelResultado.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabelResultado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
+        jTextFieldComplejo1.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        jTextFieldComplejo1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextFieldComplejo1.setToolTipText("");
+        jTextFieldComplejo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldComplejo1ActionPerformed(evt);
+            }
+        });
+
+        jLabel4.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+
+        jTextFieldComplejo2.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        jTextFieldComplejo2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextFieldComplejo2.setToolTipText("");
+        jTextFieldComplejo2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldComplejo2ActionPerformed(evt);
+            }
+        });
+
+        jButtonSumaFasores.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jButtonSumaFasores.setText("SUMAR");
+        jButtonSumaFasores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSumaFasoresActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(400, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(203, 203, 203))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addComponent(jPanelSideMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 458, Short.MAX_VALUE)))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanelSideMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabelIgual, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(26, 26, 26)
+                                .addComponent(jLabelResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jTextFieldComplejo1, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(28, 28, 28)
+                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextFieldComplejo2, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 29, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonSumaFasores)
+                        .addGap(249, 249, 249))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanelSideMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addGap(144, 144, 144)
-                .addComponent(jLabel1)
-                .addContainerGap(297, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanelSideMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(19, 19, 19)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTextFieldComplejo1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldComplejo2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(34, 34, 34)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelIgual, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(47, 47, 47)
+                .addComponent(jButtonSumaFasores, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -220,6 +280,18 @@ public class FasoresGUI extends javax.swing.JFrame {
         this.dispose();
         new FasoresGUI().setVisible(true);
     }//GEN-LAST:event_jButtonFasoresActionPerformed
+
+    private void jTextFieldComplejo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldComplejo1ActionPerformed
+
+    }//GEN-LAST:event_jTextFieldComplejo1ActionPerformed
+
+    private void jTextFieldComplejo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldComplejo2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldComplejo2ActionPerformed
+
+    private void jButtonSumaFasoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSumaFasoresActionPerformed
+
+    }//GEN-LAST:event_jButtonSumaFasoresActionPerformed
 
     /**
      * @param args the command line arguments
@@ -264,10 +336,15 @@ public class FasoresGUI extends javax.swing.JFrame {
     private javax.swing.JButton jButtonFasores;
     private javax.swing.JButton jButtonOpAvanzadas;
     private javax.swing.JButton jButtonOpBasicas;
+    public javax.swing.JButton jButtonSumaFasores;
     private javax.swing.JButton jButtonVolver;
-    private javax.swing.JLabel jLabel1;
+    public javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabelIgual;
+    public javax.swing.JLabel jLabelResultado;
     private javax.swing.JPanel jPanelAppTitle;
     private javax.swing.JPanel jPanelAppTitle1;
     private javax.swing.JPanel jPanelSideMenu;
+    public javax.swing.JTextField jTextFieldComplejo1;
+    public javax.swing.JTextField jTextFieldComplejo2;
     // End of variables declaration//GEN-END:variables
 }

@@ -27,6 +27,8 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButtonTransformarResultado = new javax.swing.JButton();
+        jButtonSumar = new javax.swing.JButton();
         jPanelSideMenu = new javax.swing.JPanel();
         jPanelAppTitle = new javax.swing.JPanel();
         appTitle = new java.awt.Label();
@@ -35,7 +37,30 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
         jButtonOpBasicas = new javax.swing.JButton();
         jButtonOpAvanzadas = new javax.swing.JButton();
         jButtonFasores = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        jTextFieldComplejo1 = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        jTextFieldComplejo2 = new javax.swing.JTextField();
+        jLabelIgual = new javax.swing.JLabel();
+        jLabelResultado = new javax.swing.JLabel();
+        jButtonTransformarResultado1 = new javax.swing.JButton();
+        jButtonRadicacion = new javax.swing.JButton();
+        jButtonPotencia = new javax.swing.JButton();
+
+        jButtonTransformarResultado.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        jButtonTransformarResultado.setText("Transformar resultado");
+        jButtonTransformarResultado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonTransformarResultadoActionPerformed(evt);
+            }
+        });
+
+        jButtonSumar.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jButtonSumar.setText("SUMA");
+        jButtonSumar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSumarActionPerformed(evt);
+            }
+        });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -169,33 +194,121 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
                 .addComponent(jButtonOpAvanzadas)
                 .addGap(18, 18, 18)
                 .addComponent(jButtonFasores)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 241, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 229, Short.MAX_VALUE)
                 .addComponent(jPanelAppTitle1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jLabel1.setText("OpAvanzadas");
+        jTextFieldComplejo1.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        jTextFieldComplejo1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextFieldComplejo1.setToolTipText("");
+        jTextFieldComplejo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldComplejo1ActionPerformed(evt);
+            }
+        });
+
+        jLabel4.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+
+        jTextFieldComplejo2.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        jTextFieldComplejo2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextFieldComplejo2.setToolTipText("");
+        jTextFieldComplejo2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldComplejo2ActionPerformed(evt);
+            }
+        });
+
+        jLabelIgual.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabelIgual.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelIgual.setText("=");
+
+        jLabelResultado.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabelResultado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
+        jButtonTransformarResultado1.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        jButtonTransformarResultado1.setText("Transformar resultado");
+        jButtonTransformarResultado1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonTransformarResultado1ActionPerformed(evt);
+            }
+        });
+
+        jButtonRadicacion.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jButtonRadicacion.setText("RADICACION");
+        jButtonRadicacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRadicacionActionPerformed(evt);
+            }
+        });
+
+        jButtonPotencia.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jButtonPotencia.setText("POTENCIA");
+        jButtonPotencia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonPotenciaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(361, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(202, 202, 202))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(213, 213, 213)
+                        .addComponent(jButtonRadicacion)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonTransformarResultado1, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jPanelSideMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabelIgual, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(26, 26, 26)
+                                .addComponent(jLabelResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jTextFieldComplejo1, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(28, 28, 28)
+                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextFieldComplejo2, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(45, 45, 45))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addComponent(jPanelSideMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 447, Short.MAX_VALUE)))
+                    .addGap(211, 211, 211)
+                    .addComponent(jButtonPotencia, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(447, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanelSideMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addGap(132, 132, 132)
-                .addComponent(jLabel1)
-                .addContainerGap(310, Short.MAX_VALUE))
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTextFieldComplejo1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldComplejo2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(34, 34, 34)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelIgual, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(114, 114, 114)
+                        .addComponent(jButtonTransformarResultado1, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonRadicacion, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(128, 128, 128))))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanelSideMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(183, 183, 183)
+                    .addComponent(jButtonPotencia, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(205, Short.MAX_VALUE)))
         );
 
         pack();
@@ -220,6 +333,34 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
         this.dispose();
         new FasoresGUI().setVisible(true);
     }//GEN-LAST:event_jButtonFasoresActionPerformed
+
+    private void jTextFieldComplejo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldComplejo1ActionPerformed
+
+    }//GEN-LAST:event_jTextFieldComplejo1ActionPerformed
+
+    private void jTextFieldComplejo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldComplejo2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldComplejo2ActionPerformed
+
+    private void jButtonTransformarResultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonTransformarResultadoActionPerformed
+
+    }//GEN-LAST:event_jButtonTransformarResultadoActionPerformed
+
+    private void jButtonSumarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSumarActionPerformed
+
+    }//GEN-LAST:event_jButtonSumarActionPerformed
+
+    private void jButtonTransformarResultado1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonTransformarResultado1ActionPerformed
+ 
+    }//GEN-LAST:event_jButtonTransformarResultado1ActionPerformed
+
+    private void jButtonRadicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRadicacionActionPerformed
+
+    }//GEN-LAST:event_jButtonRadicacionActionPerformed
+
+    private void jButtonPotenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPotenciaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonPotenciaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -262,10 +403,19 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
     private javax.swing.JButton jButtonFasores;
     private javax.swing.JButton jButtonOpAvanzadas;
     private javax.swing.JButton jButtonOpBasicas;
+    public javax.swing.JButton jButtonPotencia;
+    public javax.swing.JButton jButtonRadicacion;
+    private javax.swing.JButton jButtonSumar;
+    private javax.swing.JButton jButtonTransformarResultado;
+    public javax.swing.JButton jButtonTransformarResultado1;
     private javax.swing.JButton jButtonVolver;
-    private javax.swing.JLabel jLabel1;
+    public javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabelIgual;
+    public javax.swing.JLabel jLabelResultado;
     private javax.swing.JPanel jPanelAppTitle;
     private javax.swing.JPanel jPanelAppTitle1;
     private javax.swing.JPanel jPanelSideMenu;
+    public javax.swing.JTextField jTextFieldComplejo1;
+    public javax.swing.JTextField jTextFieldComplejo2;
     // End of variables declaration//GEN-END:variables
 }
