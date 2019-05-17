@@ -1,5 +1,7 @@
 package model;
 
+import java.util.ArrayList;
+
 public class ComplejoPolar {
     // 1. Estructura de complejos en forma polar
     public double modulo;
@@ -45,21 +47,33 @@ public class ComplejoPolar {
         return this;
     }
     
-    public ComplejoPolar potenciaNatural(int exponente){
-        this.modulo = Math.pow(this.modulo,exponente);
-        this.argumento *= exponente ;
+    public ComplejoPolar potenciaNatural( ComplejoPolar complejoPol, int exponente){
+        this.modulo = Math.pow(complejoPol.modulo,exponente);
+        this.argumento = complejoPol.argumento *exponente ;
         return this;
     }
     
-    public ComplejoPolar raicesNEsimas( int indice ) {
-        this.modulo = Math.pow(this.modulo,1/indice);
-       // this.argumento = HAY MUCHAS SOLUCIONES, IMPLEMENTACION?;
+    public ComplejoPolar raizNEsima( ComplejoPolar complejoPol, int indice, int k ) {
+        this.modulo = Math.pow(complejoPol.modulo,1/indice);
+        this.argumento = (complejoPol.argumento + 2*k*Math.PI)/indice;
         return this;
     }
     
-    public ComplejoPolar raicesPrimitivas( int indice ) {
-        // Implementacion usando funcion obtenerMCD declarada abajo
-        return this;
+    public Boolean esRaizPrimitiva ( int indice, int k ) {
+        return obtenerMCD(k,indice)==1;
+    }
+    
+    public ArrayList<ComplejoPolar> raicesPrimitivas( int indice ) {
+        ArrayList<ComplejoPolar> raicesPrim;
+        raicesPrim = new ArrayList<>();
+        
+        for( int k=0; k < indice; k++ ) {
+            if( esRaizPrimitiva(indice,k) ) {
+                ComplejoPolar w = new ComplejoPolar( 1, 2*k*Math.PI/indice );
+                raicesPrim.add(w);
+            }
+        }
+        return raicesPrim;
     }
     
     // 4. Funcion de pasaje polar->binomica
