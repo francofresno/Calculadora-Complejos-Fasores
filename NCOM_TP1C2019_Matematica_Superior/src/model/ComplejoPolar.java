@@ -47,15 +47,15 @@ public class ComplejoPolar {
         return this;
     }
     
-    public ComplejoPolar potenciaNatural( ComplejoPolar complejoPol, int exponente){
-        this.modulo = Math.pow(complejoPol.modulo,exponente);
-        this.argumento = complejoPol.argumento *exponente ;
+    public ComplejoPolar potenciaNatural( int exponente){
+        this.modulo = Math.pow(this.modulo,exponente);
+        this.argumento *= exponente ;
         return this;
     }
     
-    public ComplejoPolar raizNEsima( ComplejoPolar complejoPol, int indice, int k ) {
-        this.modulo = Math.pow(complejoPol.modulo,1/indice);
-        this.argumento = (complejoPol.argumento + 2*k*Math.PI)/indice;
+    public ComplejoPolar raizNEsima( int indice, int k ) {
+        this.modulo = Math.pow(this.modulo,1/indice);
+        this.argumento = (this.argumento + 2*k*Math.PI)/indice;
         return this;
     }
     
