@@ -7,6 +7,7 @@ package view;
 
 import model.ComplejoBinomica;
 import model.ComplejoPolar;
+import model.FlagSyntax;
 
 /**
  *
@@ -840,13 +841,6 @@ public class OpBasicasGUI extends javax.swing.JFrame {
                 new OpBasicasGUI().setVisible(true);
             }
         });
-    }
-
-    private class FlagSyntax{
-       int flag;
-       FlagSyntax(){
-           flag=1;
-       }
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
