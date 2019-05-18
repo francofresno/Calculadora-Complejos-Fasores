@@ -5,6 +5,7 @@
  */
 package view;
 
+import java.awt.event.ActionListener;
 import model.ComplejoBinomica;
 import model.ComplejoPolar;
 import model.FlagSyntax;
@@ -42,7 +43,7 @@ public class OpBasicasGUI extends javax.swing.JFrame {
         jTextFieldComplejo1 = new javax.swing.JTextField();
         jTextFieldComplejo2 = new javax.swing.JTextField();
         jLabelIgual = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        jLabelOperator = new javax.swing.JLabel();
         jButtonSumar = new javax.swing.JButton();
         jButtonRestar = new javax.swing.JButton();
         jButtonProducto = new javax.swing.JButton();
@@ -210,7 +211,7 @@ public class OpBasicasGUI extends javax.swing.JFrame {
         jLabelIgual.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelIgual.setText("=");
 
-        jLabel4.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabelOperator.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
 
         jButtonSumar.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jButtonSumar.setText("SUMA");
@@ -286,7 +287,7 @@ public class OpBasicasGUI extends javax.swing.JFrame {
                         .addGap(26, 26, 26)
                         .addComponent(jTextFieldComplejo1, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(28, 28, 28)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabelOperator, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextFieldComplejo2, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))))
@@ -300,7 +301,7 @@ public class OpBasicasGUI extends javax.swing.JFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jTextFieldComplejo1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jTextFieldComplejo2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelOperator, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelIgual, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -353,98 +354,18 @@ public class OpBasicasGUI extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jTextFieldComplejo1ActionPerformed
 
+
+    public void addController(ActionListener controller){
+	jButtonSumar.addActionListener(controller);
+    }
+    
+    
     private void jButtonSumarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSumarActionPerformed
-        String num1,num2,resultado;
-        jLabel4.setText("+");
-        num1 = jTextFieldComplejo1.getText();
-        num2 = jTextFieldComplejo2.getText();
-        FlagSyntax flagSyntax = new FlagSyntax();
-        switch (num1.charAt(0)){
-            case '(' : {
-                switch (num2.charAt(0)){
-                    case '(' :{
-                        ComplejoBinomica a,b,suma;            
-                        a=getNumeroBinomicoDeTexto(num1,flagSyntax);
-                        b=getNumeroBinomicoDeTexto(num2,flagSyntax);
-                        if (flagSyntax.flag==1){
-                            suma = a.suma(b);  
-                            resultado = resultadoBinomica(suma);
-                             jLabelResultado.setText(resultado);
-                        }else{
-                            jLabelResultado.setText("SYNTAX ERROR");
-                        }
-                         break;
-                    }
-                    case '[' : {
-                        ComplejoBinomica a,suma,b=new ComplejoBinomica();
-                        ComplejoPolar bp;
-                        a=getNumeroBinomicoDeTexto(num1,flagSyntax);
-                        bp=getNumeroPolarDeTexto(num2,flagSyntax);
-                        b=b.polarABinomica(bp);
-                        if (flagSyntax.flag==1){
-                            suma = a.suma(b);  
-                            resultado = resultadoBinomica(suma);
-                            jLabelResultado.setText(resultado);
-                        }else{
-                            jLabelResultado.setText("SYNTAX ERROR");
-                        }
-                        break;
-                    }
-                    default : {
-                        jLabelResultado.setText("SYNTAX ERROR");
-                        break;
-                    }
-                }
-                break;
-            }
-        case '[':{
-                  switch(num2.charAt(0)){
-                  case '(' :{
-                        ComplejoPolar ap,sumaPolar= new ComplejoPolar();
-                        ComplejoBinomica ab = new ComplejoBinomica(),bb,sumaBin;            
-                        ap=getNumeroPolarDeTexto(num1,flagSyntax);
-                        bb=getNumeroBinomicoDeTexto(num2,flagSyntax);
-                        if (flagSyntax.flag==1){
-                            ab=ab.polarABinomica(ap);
-                            sumaBin = ab.suma(bb);  
-                            sumaPolar = sumaPolar.binomicaAPolar(sumaBin);
-                            resultado = resultadoPolar(sumaPolar);
-                            jLabelResultado.setText(resultado);
-                        }else{
-                            jLabelResultado.setText("SYNTAX ERROR");
-                        }
-                        break;
-                    }
-                    case '[' : {
-                        ComplejoPolar ap,bp,sumaPolar= new ComplejoPolar();
-                        ComplejoBinomica ab = new ComplejoBinomica(),bb= new ComplejoBinomica(),sumaBin;            
-                        ap=getNumeroPolarDeTexto(num1,flagSyntax);
-                        bp=getNumeroPolarDeTexto(num2,flagSyntax);
-                        if (flagSyntax.flag==1){
-                            ab=ab.polarABinomica(ap);
-                            bb=bb.polarABinomica(bp);
-                            sumaBin = ab.suma(bb);  
-                            sumaPolar = sumaPolar.binomicaAPolar(sumaBin);
-                            resultado = resultadoPolar(sumaPolar);
-                            jLabelResultado.setText(resultado);
-                        }else{
-                            jLabelResultado.setText("SYNTAX ERROR");
-                        }
-                        break;
-                    }
-                    default : {
-                        jLabelResultado.setText("SYNTAX ERROR");
-                        break;
-                    }
-                }
-                break;    
-        }
-        default : jLabelResultado.setText("SYNTAX ERROR");
-        }
+
     }//GEN-LAST:event_jButtonSumarActionPerformed
 
     private void jButtonRestarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRestarActionPerformed
-        jLabel4.setText("-");
+        jLabelOperator.setText("-");
         String num1,num2,resultado;
         num1 = jTextFieldComplejo1.getText();
         num2 = jTextFieldComplejo2.getText();
@@ -534,7 +455,7 @@ public class OpBasicasGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonRestarActionPerformed
 
     private void jButtonProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonProductoActionPerformed
-        jLabel4.setText("*");
+        jLabelOperator.setText("*");
         String num1,num2,resultado;
         num1 = jTextFieldComplejo1.getText();
         num2 = jTextFieldComplejo2.getText();
@@ -624,7 +545,7 @@ public class OpBasicasGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonProductoActionPerformed
 
     private void jButtonCocienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCocienteActionPerformed
-        jLabel4.setText("/");
+        jLabelOperator.setText("/");
         String num1,num2,resultado;
         num1 = jTextFieldComplejo1.getText();
         num2 = jTextFieldComplejo2.getText();
@@ -845,22 +766,22 @@ public class OpBasicasGUI extends javax.swing.JFrame {
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private java.awt.Label appTitle;
-    private javax.swing.JButton jButtonCociente;
+    public javax.swing.JButton jButtonCociente;
     private javax.swing.JButton jButtonFasores;
     private javax.swing.JButton jButtonOpAvanzadas;
     private javax.swing.JButton jButtonOpBasicas;
-    private javax.swing.JButton jButtonProducto;
-    private javax.swing.JButton jButtonRestar;
-    private javax.swing.JButton jButtonSumar;
-    private javax.swing.JButton jButtonTransformarResultado;
+    public javax.swing.JButton jButtonProducto;
+    public javax.swing.JButton jButtonRestar;
+    public javax.swing.JButton jButtonSumar;
+    public javax.swing.JButton jButtonTransformarResultado;
     private javax.swing.JButton jButtonVolver;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabelIgual;
-    private javax.swing.JLabel jLabelResultado;
+    public javax.swing.JLabel jLabelOperator;
+    public javax.swing.JLabel jLabelResultado;
     private javax.swing.JPanel jPanelAppTitle;
     private javax.swing.JPanel jPanelAppTitle1;
     private javax.swing.JPanel jPanelSideMenu;
-    private javax.swing.JTextField jTextFieldComplejo1;
-    private javax.swing.JTextField jTextFieldComplejo2;
+    public javax.swing.JTextField jTextFieldComplejo1;
+    public javax.swing.JTextField jTextFieldComplejo2;
     // End of variables declaration//GEN-END:variables
 }
