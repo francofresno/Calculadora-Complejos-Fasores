@@ -361,7 +361,93 @@ public class OpBasicasGUI extends javax.swing.JFrame {
     
     
     private void jButtonSumarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSumarActionPerformed
-
+        String num1,num2,resultado;
+        jLabelOperator.setText("+");
+        num1 = jTextFieldComplejo1.getText();
+        num2 = jTextFieldComplejo2.getText();
+        FlagSyntax flagSyntax = new FlagSyntax();
+        switch (num1.charAt(0)){
+            case '(' : {
+                switch (num2.charAt(0)){
+                    case '(' :{
+                        ComplejoBinomica a,b,suma;            
+                        a=getNumeroBinomicoDeTexto(num1,flagSyntax);
+                        b=getNumeroBinomicoDeTexto(num2,flagSyntax);
+                        if (flagSyntax.flag==1){
+                            suma = a.suma(b);  
+                            resultado = resultadoBinomica(suma);
+                            jLabelResultado.setText(resultado);
+                        }else{
+                            jLabelResultado.setText("SYNTAX ERROR");
+                        }
+                         break;
+                    }
+                    case '[' : {
+                        ComplejoBinomica a,suma,b=new ComplejoBinomica();
+                        ComplejoPolar bp;
+                        a=getNumeroBinomicoDeTexto(num1,flagSyntax);
+                        bp=getNumeroPolarDeTexto(num2,flagSyntax);
+                        b=b.polarABinomica(bp);
+                        if (flagSyntax.flag==1){
+                            suma = a.suma(b);  
+                            resultado = resultadoBinomica(suma);
+                            jLabelResultado.setText(resultado);
+                        }else{
+                            jLabelResultado.setText("SYNTAX ERROR");
+                        }
+                        break;
+                    }
+                    default : {
+                        jLabelResultado.setText("SYNTAX ERROR");
+                        break;
+                    }
+                }
+                break;
+            }
+        case '[':{
+                  switch(num2.charAt(0)){
+                  case '(' :{
+                        ComplejoPolar ap,sumaPolar= new ComplejoPolar();
+                        ComplejoBinomica ab = new ComplejoBinomica(),bb,sumaBin;            
+                        ap=getNumeroPolarDeTexto(num1,flagSyntax);
+                        bb=getNumeroBinomicoDeTexto(num2,flagSyntax);
+                        if (flagSyntax.flag==1){
+                            ab=ab.polarABinomica(ap);
+                            sumaBin = ab.suma(bb);  
+                            sumaPolar = sumaPolar.binomicaAPolar(sumaBin);
+                            resultado = resultadoPolar(sumaPolar);
+                            jLabelResultado.setText(resultado);
+                        }else{
+                            jLabelResultado.setText("SYNTAX ERROR");
+                        }
+                        break;
+                    }
+                    case '[' : {
+                        ComplejoPolar ap,bp,sumaPolar= new ComplejoPolar();
+                        ComplejoBinomica ab = new ComplejoBinomica(),bb= new ComplejoBinomica(),sumaBin;            
+                        ap=getNumeroPolarDeTexto(num1,flagSyntax);
+                        bp=getNumeroPolarDeTexto(num2,flagSyntax);
+                        if (flagSyntax.flag==1){
+                            ab=ab.polarABinomica(ap);
+                            bb=bb.polarABinomica(bp);
+                            sumaBin = ab.suma(bb);  
+                            sumaPolar = sumaPolar.binomicaAPolar(sumaBin);
+                            resultado = resultadoPolar(sumaPolar);
+                            jLabelResultado.setText(resultado);
+                        }else{
+                            jLabelResultado.setText("SYNTAX ERROR");
+                        }
+                        break;
+                    }
+                    default : {
+                        jLabelResultado.setText("SYNTAX ERROR");
+                        break;
+                    }
+                }
+                break;    
+        }
+        default : jLabelResultado.setText("SYNTAX ERROR");
+        }
     }//GEN-LAST:event_jButtonSumarActionPerformed
 
     private void jButtonRestarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRestarActionPerformed
