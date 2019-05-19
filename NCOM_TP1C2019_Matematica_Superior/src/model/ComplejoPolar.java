@@ -81,8 +81,8 @@ public class ComplejoPolar {
         this.modulo = elModuloDe(complejoBin.componenteReal,complejoBin.componenteImaginaria);
         
         if (complejoBin.componenteReal != 0 && complejoBin.componenteImaginaria !=0) {
-            double argumentoSinArreglo = Math.toRadians( elArcotangenteDe(complejoBin.componenteReal,complejoBin.componenteImaginaria) );
-            this.argumento = arreglarArgumento(argumentoSinArreglo);
+            //double argumentoSinArreglo = Math.toRadians( elArcotangenteDe(complejoBin.componenteReal,complejoBin.componenteImaginaria) );
+            this.argumento =elArcotangenteDe(complejoBin.componenteReal,complejoBin.componenteImaginaria) ;//arreglarArgumento(argumentoSinArreglo);
         } else {
            if(complejoBin.componenteReal == 0) {
                 if(complejoBin.componenteImaginaria > 0) {
@@ -120,7 +120,7 @@ public class ComplejoPolar {
     }
     
     public double elArcotangenteDe (double re, double im) {
-        return Math.atan(re/im);
+        return Math.atan2(im,re);
     }
     
     int obtenerMCD(int p, int q) {

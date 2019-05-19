@@ -17,6 +17,14 @@ public class Main {
         cpp.binomicaAPolar(cb);
         cpp.potenciaNatural(2);
         
+        ComplejoBinomica b = new ComplejoBinomica (3,4);
+        ComplejoPolar p = new ComplejoPolar ();
+        p=p.binomicaAPolar(b);
+        
+        System.out.println(b.componenteReal);
+        System.out.println(Math.atan2(4,3));
+        System.out.println(p.modulo);
+        System.out.println(p.argumento);
         
         System.out.println(cp.modulo);
         System.out.println(cp.argumento);
@@ -25,7 +33,7 @@ public class Main {
         System.out.println(cpp.argumento);
 
         
-       // new MainGUI().setVisible(true);     
+       new MainGUI().setVisible(true);     
     }
 
 }
