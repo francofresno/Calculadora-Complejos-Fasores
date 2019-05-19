@@ -6,6 +6,7 @@
 package view;
 
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import model.ComplejoBinomica;
 import model.ComplejoPolar;
 import model.FlagSyntax;
@@ -32,8 +33,13 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButtonTransformarResultado = new javax.swing.JButton();
-        jButtonSumar = new javax.swing.JButton();
+        jFrameRaicesEnesimas = new javax.swing.JFrame();
+        jTextFieldIndiceREnesimas = new javax.swing.JTextField();
+        jLabelResultadoREnesimas = new javax.swing.JLabel();
+        jButtonREnesimasEnFrame = new javax.swing.JButton();
+        jFrameRadicacion = new javax.swing.JFrame();
+        jLabelResultadoRadicacion = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         jPanelSideMenu = new javax.swing.JPanel();
         jPanelAppTitle = new javax.swing.JPanel();
         appTitle = new java.awt.Label();
@@ -45,27 +51,96 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
         jTextFieldComplejo = new javax.swing.JTextField();
         jLabelOperator = new javax.swing.JLabel();
         jLabelResultado = new javax.swing.JLabel();
-        jButtonTransformarResultado1 = new javax.swing.JButton();
+        jButtonTransformarResultado = new javax.swing.JButton();
         jButtonRaicesNEsimas = new javax.swing.JButton();
         jButtonPotencia = new javax.swing.JButton();
         jButtonRadicacion = new javax.swing.JButton();
         jTextFieldIndice = new javax.swing.JTextField();
 
-        jButtonTransformarResultado.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        jButtonTransformarResultado.setText("Transformar resultado");
-        jButtonTransformarResultado.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldIndiceREnesimas.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        jTextFieldIndiceREnesimas.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextFieldIndiceREnesimas.setToolTipText("");
+        jTextFieldIndiceREnesimas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonTransformarResultadoActionPerformed(evt);
+                jTextFieldIndiceREnesimasActionPerformed(evt);
             }
         });
 
-        jButtonSumar.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jButtonSumar.setText("SUMA");
-        jButtonSumar.addActionListener(new java.awt.event.ActionListener() {
+        jLabelResultadoREnesimas.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabelResultadoREnesimas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelResultadoREnesimas.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jButtonREnesimasEnFrame.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jButtonREnesimasEnFrame.setText("RADICACION");
+        jButtonREnesimasEnFrame.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonSumarActionPerformed(evt);
+                jButtonREnesimasEnFrameActionPerformed(evt);
             }
         });
+
+        javax.swing.GroupLayout jFrameRaicesEnesimasLayout = new javax.swing.GroupLayout(jFrameRaicesEnesimas.getContentPane());
+        jFrameRaicesEnesimas.getContentPane().setLayout(jFrameRaicesEnesimasLayout);
+        jFrameRaicesEnesimasLayout.setHorizontalGroup(
+            jFrameRaicesEnesimasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jFrameRaicesEnesimasLayout.createSequentialGroup()
+                .addGroup(jFrameRaicesEnesimasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jFrameRaicesEnesimasLayout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addGroup(jFrameRaicesEnesimasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabelResultadoREnesimas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(jFrameRaicesEnesimasLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextFieldIndiceREnesimas, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jFrameRaicesEnesimasLayout.createSequentialGroup()
+                        .addGap(241, 241, 241)
+                        .addComponent(jButtonREnesimasEnFrame)))
+                .addContainerGap(112, Short.MAX_VALUE))
+        );
+        jFrameRaicesEnesimasLayout.setVerticalGroup(
+            jFrameRaicesEnesimasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jFrameRaicesEnesimasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTextFieldIndiceREnesimas, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addComponent(jLabelResultadoREnesimas, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButtonREnesimasEnFrame, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(24, Short.MAX_VALUE))
+        );
+
+        jFrameRadicacion.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        jFrameRadicacion.setAlwaysOnTop(true);
+        jFrameRadicacion.setMinimumSize(new java.awt.Dimension(622, 300));
+
+        jLabelResultadoRadicacion.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabelResultadoRadicacion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelResultadoRadicacion.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel1.setText("RESULTADO");
+
+        javax.swing.GroupLayout jFrameRadicacionLayout = new javax.swing.GroupLayout(jFrameRadicacion.getContentPane());
+        jFrameRadicacion.getContentPane().setLayout(jFrameRadicacionLayout);
+        jFrameRadicacionLayout.setHorizontalGroup(
+            jFrameRadicacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jFrameRadicacionLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelResultadoRadicacion, javax.swing.GroupLayout.DEFAULT_SIZE, 602, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(jFrameRadicacionLayout.createSequentialGroup()
+                .addGap(262, 262, 262)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jFrameRadicacionLayout.setVerticalGroup(
+            jFrameRadicacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jFrameRadicacionLayout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabelResultadoRadicacion, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(48, Short.MAX_VALUE))
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -199,7 +274,7 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
                 .addComponent(jButtonOpAvanzadas)
                 .addGap(18, 18, 18)
                 .addComponent(jButtonFasores)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 199, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 163, Short.MAX_VALUE)
                 .addComponent(jPanelAppTitle1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -218,11 +293,11 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
         jLabelResultado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelResultado.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jButtonTransformarResultado1.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        jButtonTransformarResultado1.setText("Transformar resultado");
-        jButtonTransformarResultado1.addActionListener(new java.awt.event.ActionListener() {
+        jButtonTransformarResultado.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        jButtonTransformarResultado.setText("Transformar resultado");
+        jButtonTransformarResultado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonTransformarResultado1ActionPerformed(evt);
+                jButtonTransformarResultadoActionPerformed(evt);
             }
         });
 
@@ -275,7 +350,7 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
                                 .addComponent(jButtonRaicesNEsimas)
                                 .addGap(44, 44, 44)
                                 .addComponent(jButtonRadicacion))
-                            .addComponent(jButtonTransformarResultado1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(jButtonTransformarResultado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(85, 85, 85)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -285,7 +360,7 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
                                 .addComponent(jLabelOperator, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jTextFieldIndice, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabelResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jLabelResultado, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(28, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -305,11 +380,12 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
                     .addComponent(jButtonRadicacion, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonRaicesNEsimas, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(32, 32, 32)
-                .addComponent(jButtonTransformarResultado1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButtonTransformarResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVolverActionPerformed
@@ -337,19 +413,18 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextFieldComplejoActionPerformed
 
     private void jButtonTransformarResultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonTransformarResultadoActionPerformed
-
+ 
     }//GEN-LAST:event_jButtonTransformarResultadoActionPerformed
 
-    private void jButtonSumarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSumarActionPerformed
-
-    }//GEN-LAST:event_jButtonSumarActionPerformed
-
-    private void jButtonTransformarResultado1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonTransformarResultado1ActionPerformed
- 
-    }//GEN-LAST:event_jButtonTransformarResultado1ActionPerformed
-
     private void jButtonRaicesNEsimasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRaicesNEsimasActionPerformed
-
+        String numero, resultado;
+        int indice;
+        
+        numero = jTextFieldComplejo.getText();
+        indice = Integer.parseInt(jTextFieldIndice.getText());
+        FlagSyntax flagSyntax = new FlagSyntax();
+        
+        
     }//GEN-LAST:event_jButtonRaicesNEsimasActionPerformed
 
     private void jButtonPotenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPotenciaActionPerformed
@@ -389,12 +464,70 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonPotenciaActionPerformed
 
     private void jButtonRadicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRadicacionActionPerformed
-        // TODO add your handling code here:
+        String numero, resultado;
+        int indice;
+        
+        numero = jTextFieldComplejo.getText();
+        indice = Integer.parseInt(jTextFieldIndice.getText());
+        FlagSyntax flagSyntax = new FlagSyntax();
+        ArrayList<ComplejoPolar> listaResultados = new ArrayList<>();
+        
+        switch (numero.charAt(0)) {
+            case '(' :
+                ComplejoBinomica cb;
+                cb = getNumeroBinomicoDeTexto(numero,flagSyntax);
+                
+                if (flagSyntax.flag==1){                   
+                    for (int k=0; k<indice ; k++) {
+                        ComplejoPolar cp = new ComplejoPolar();
+                        cp.binomicaAPolar(cb);
+                        cp.raizNEsima(indice,k);
+                        listaResultados.add(cp);
+                    }                
+                } else {
+                    jLabelResultado.setText("SYNTAX ERROR");
+                }
+                break;
+            case '[' :
+                ComplejoPolar cp, cpOriginal;
+                cp = getNumeroPolarDeTexto (numero,flagSyntax);
+                cpOriginal = cp;
+                
+                if (flagSyntax.flag==1){   
+                    for (int k=0; k<indice ; k++) {
+                        cp.raizNEsima(indice,k);
+                        listaResultados.add(cp);
+                        
+                        cp = cpOriginal;
+                    } 
+                } else {
+                    jLabelResultado.setText("SYNTAX ERROR");
+                }
+                break;
+        }         
+        
+        String valueToBeInserted="";
+        for (int i=0; listaResultados.size() >= i; i++) {
+            
+            valueToBeInserted = valueToBeInserted + " " + resultadoPolar(listaResultados.get(i));
+     
+        }
+        jLabelResultadoRadicacion.setText(valueToBeInserted );
+        jFrameRadicacion.setVisible(true);
+        
     }//GEN-LAST:event_jButtonRadicacionActionPerformed
 
     private void jTextFieldIndiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldIndiceActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldIndiceActionPerformed
+
+    private void jTextFieldIndiceREnesimasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldIndiceREnesimasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldIndiceREnesimasActionPerformed
+
+    private void jButtonREnesimasEnFrameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonREnesimasEnFrameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonREnesimasEnFrameActionPerformed
 
     private ComplejoPolar getNumeroPolarDeTexto (String textfield,FlagSyntax flagSyntax){
         ComplejoPolar numeroComplejo=new ComplejoPolar();
@@ -509,19 +642,24 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
     private javax.swing.JButton jButtonOpAvanzadas;
     private javax.swing.JButton jButtonOpBasicas;
     public javax.swing.JButton jButtonPotencia;
+    public javax.swing.JButton jButtonREnesimasEnFrame;
     public javax.swing.JButton jButtonRadicacion;
     public javax.swing.JButton jButtonRaicesNEsimas;
-    private javax.swing.JButton jButtonSumar;
-    private javax.swing.JButton jButtonTransformarResultado;
-    public javax.swing.JButton jButtonTransformarResultado1;
+    public javax.swing.JButton jButtonTransformarResultado;
     private javax.swing.JButton jButtonVolver;
+    private javax.swing.JFrame jFrameRadicacion;
+    private javax.swing.JFrame jFrameRaicesEnesimas;
+    private javax.swing.JLabel jLabel1;
     public javax.swing.JLabel jLabelOperator;
     public javax.swing.JLabel jLabelResultado;
+    public javax.swing.JLabel jLabelResultadoREnesimas;
+    public javax.swing.JLabel jLabelResultadoRadicacion;
     private javax.swing.JPanel jPanelAppTitle;
     private javax.swing.JPanel jPanelAppTitle1;
     private javax.swing.JPanel jPanelSideMenu;
     public javax.swing.JTextField jTextFieldComplejo;
     public javax.swing.JTextField jTextFieldIndice;
+    public javax.swing.JTextField jTextFieldIndiceREnesimas;
     // End of variables declaration//GEN-END:variables
 
 
