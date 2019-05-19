@@ -47,7 +47,7 @@ public class ComplejoPolar {
         return this;
     }
     
-    public ComplejoPolar potenciaNatural( int exponente){
+    public ComplejoPolar potenciaNatural( int exponente ){
         this.modulo = Math.pow(this.modulo,exponente);
         this.argumento *= exponente ;
         return this;
@@ -85,18 +85,18 @@ public class ComplejoPolar {
             this.argumento = arreglarArgumento(argumentoSinArreglo);
         } else {
            if(complejoBin.componenteReal == 0) {
-                        if(complejoBin.componenteImaginaria > 0) {
-                         this.argumento = (Math.PI)/2;
-                    } else {
-                         this.argumento = (3 * Math.PI) / 2;
-                    }   
+                if(complejoBin.componenteImaginaria > 0) {
+                    this.argumento = (Math.PI)/2;
+                } else {
+                    this.argumento = (3 * Math.PI) / 2;
+                }   
            }   
           if(complejoBin.componenteImaginaria == 0) {
-                    if ( complejoBin.componenteReal >=0) {
-                        this.argumento = 0;
-                    }else{
-                        this.argumento = Math.PI ;
-                    }           
+                if ( complejoBin.componenteReal >=0) {
+                    this.argumento = 0;
+                }else{
+                    this.argumento = Math.PI ;
+                }           
             }
         }       
         return this;

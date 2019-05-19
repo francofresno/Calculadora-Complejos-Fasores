@@ -6,6 +6,9 @@
 package view;
 
 import java.awt.event.ActionListener;
+import model.ComplejoBinomica;
+import model.ComplejoPolar;
+import model.FlagSyntax;
 
 /**
  *
@@ -350,7 +353,39 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonRaicesNEsimasActionPerformed
 
     private void jButtonPotenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPotenciaActionPerformed
-        // TODO add your handling code here:
+        String numero, resultado;
+        int indice;
+        
+        numero = jTextFieldComplejo.getText();
+        indice = Integer.parseInt(jTextFieldIndice.getText());
+        FlagSyntax flagSyntax = new FlagSyntax();
+        
+        switch (numero.charAt(0)) {
+            case '(' :
+                ComplejoBinomica cb;
+                cb = getNumeroBinomicoDeTexto(numero,flagSyntax);
+                
+                if (flagSyntax.flag==1){
+                    ComplejoPolar cp = new ComplejoPolar();
+                    cp.binomicaAPolar(cb);     
+                    cp.potenciaNatural(indice);
+                    jLabelResultado.setText(resultadoPolar(cp));
+                } else {
+                    jLabelResultado.setText("SYNTAX ERROR");
+                }
+                break;
+            case '[' :
+                ComplejoPolar cp;
+                cp = getNumeroPolarDeTexto (numero,flagSyntax);
+                
+                if (flagSyntax.flag==1){   
+                    cp.potenciaNatural(indice);
+                    jLabelResultado.setText(resultadoPolar(cp));
+                } else {
+                    jLabelResultado.setText("SYNTAX ERROR");
+                }
+                break;
+        }     
     }//GEN-LAST:event_jButtonPotenciaActionPerformed
 
     private void jButtonRadicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRadicacionActionPerformed
@@ -361,8 +396,74 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldIndiceActionPerformed
 
-    public void addPotenciaListener(ActionListener pal) {
-        jButtonPotencia.addActionListener(pal);
+    private ComplejoPolar getNumeroPolarDeTexto (String textfield,FlagSyntax flagSyntax){
+        ComplejoPolar numeroComplejo=new ComplejoPolar();
+        String a="0",b="0";
+        int comaPos=0;
+        try{
+            comaPos= textfield.indexOf(';');
+            a=textfield.substring(1,comaPos);
+            b=textfield.substring(comaPos+1, textfield.length()-1);
+        }catch(StringIndexOutOfBoundsException  e){
+            flagSyntax.flag=0;
+        }        
+        if (textfield.charAt(textfield.length()-1)!=']'){
+            flagSyntax.flag=0;
+        }
+        try{
+            numeroComplejo.modulo = Double.parseDouble(a);
+            numeroComplejo.argumento = Double.parseDouble(b);
+        }catch(NumberFormatException e){
+            flagSyntax.flag=0;
+        }
+        return numeroComplejo;
+    } 
+    
+    private ComplejoBinomica getNumeroBinomicoDeTexto (String textfield,FlagSyntax flagSyntax){
+        ComplejoBinomica numeroComplejo=new ComplejoBinomica();
+        String a="0",b="0";
+        int comaPos=0;
+        try{
+            comaPos= textfield.indexOf(',');
+            a=textfield.substring(1,comaPos);
+            b=textfield.substring(comaPos+1, textfield.length()-1);
+        }catch(StringIndexOutOfBoundsException  e){
+            flagSyntax.flag=0;
+        }        
+        if (textfield.charAt(textfield.length()-1)!=')'){
+           
+        }
+        try{
+            numeroComplejo.componenteReal = Double.parseDouble(a);             
+            numeroComplejo.componenteImaginaria = Double.parseDouble(b);
+        }catch(NumberFormatException e){
+             flagSyntax.flag=0;
+        }
+        return numeroComplejo;
+    }
+   
+    private String resultadoBinomica (ComplejoBinomica resultado){
+        String res="(",num;
+        Double real = resultado.componenteReal,imaginaria=resultado.componenteImaginaria;
+        num = real.toString();
+        res=res.concat(num);
+        res=res.concat(",");
+        num=imaginaria.toString();
+        res=res.concat(num);
+        res=res.concat(")");
+        return res;
+    }
+    
+     private String resultadoPolar (ComplejoPolar resultado){
+        String res="[",num;
+        Double mod = resultado.modulo,arg=resultado.argumento;
+        num = mod.toString();
+        res=res.concat(num);
+        res=res.concat(";");
+        num=arg.toString();
+        res=res.concat(num);
+        res=res.concat("]");
+        return res;
     }
     
     
