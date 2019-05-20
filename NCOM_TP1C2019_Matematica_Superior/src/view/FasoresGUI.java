@@ -5,6 +5,8 @@
  */
 package view;
 
+import com.placeholder.PlaceHolder;
+
 /**
  *
  * @author Franco
@@ -16,6 +18,8 @@ public class FasoresGUI extends javax.swing.JFrame {
      */
     public FasoresGUI() {
         initComponents();
+        PlaceHolder holder1 = new PlaceHolder(jTextFieldComplejo1, "Ingrese f(t)");
+        PlaceHolder holder2 = new PlaceHolder(jTextFieldComplejo2, "Ingrese g(t)");
     }
 
     /**
@@ -244,6 +248,7 @@ public class FasoresGUI extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVolverActionPerformed

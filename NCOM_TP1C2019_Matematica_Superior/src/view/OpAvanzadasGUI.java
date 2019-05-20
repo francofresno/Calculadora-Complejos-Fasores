@@ -5,6 +5,7 @@
  */
 package view;
 
+import com.placeholder.PlaceHolder;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import model.ComplejoBinomica;
@@ -22,6 +23,8 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
      */
     public OpAvanzadasGUI() {
         initComponents();
+        PlaceHolder holder1 = new PlaceHolder(jTextFieldComplejo, "Ingrese un complejo (x,y) o [p;o]");
+        PlaceHolder holder2 = new PlaceHolder(jTextFieldIndice, "Indice > 0");
     }
 
     /**
@@ -430,92 +433,103 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonRaicesNEsimasActionPerformed
 
     private void jButtonPotenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPotenciaActionPerformed
-        String numero, resultado;
+        String numero;
         int indice;
         
         numero = jTextFieldComplejo.getText();
-        indice = Integer.parseInt(jTextFieldIndice.getText());
         FlagSyntax flagSyntax = new FlagSyntax();
         
-        switch (numero.charAt(0)) {
-            case '(' :
-                ComplejoBinomica cb;
-                cb = getNumeroBinomicoDeTexto(numero,flagSyntax);
+        try {
+            indice = Integer.parseInt(jTextFieldIndice.getText());
+            switch (numero.charAt(0)) {
+                case '(' : 
+                    ComplejoBinomica cb;
+                    cb = getNumeroBinomicoDeTexto(numero,flagSyntax);
                 
-                if (flagSyntax.flag==1){
-                    ComplejoPolar cp = new ComplejoPolar();
-                    cp.binomicaAPolar(cb);     
-                    cp.potenciaNatural(indice);
-                    jLabelResultado.setText(resultadoPolar(cp));
-                } else {
-                    jLabelResultado.setText("SYNTAX ERROR");
-                }
-                break;
-            case '[' :
-                ComplejoPolar cp;
-                cp = getNumeroPolarDeTexto (numero,flagSyntax);
+                    if (flagSyntax.flag==1){
+                        ComplejoPolar cp = new ComplejoPolar();
+                        cp.binomicaAPolar(cb);     
+                        cp.potenciaNatural(indice);
+                        jLabelResultado.setText(resultadoPolar(cp));
+                    } else {
+                        jLabelResultado.setText("SYNTAX ERROR");
+                    }
+                    break; 
+                case '[' : 
+                    ComplejoPolar cp;
+                    cp = getNumeroPolarDeTexto (numero,flagSyntax);
                 
-                if (flagSyntax.flag==1){   
-                    cp.potenciaNatural(indice);
-                    jLabelResultado.setText(resultadoPolar(cp));
-                } else {
-                    jLabelResultado.setText("SYNTAX ERROR");
-                }
-                break;
-        }     
+                    if (flagSyntax.flag==1){   
+                        cp.potenciaNatural(indice);
+                        jLabelResultado.setText(resultadoPolar(cp));
+                    } else {
+                        jLabelResultado.setText("SYNTAX ERROR");
+                    }
+                    break;
+                default : jLabelResultado.setText("SYNTAX ERROR");
+            }
+        } catch (NumberFormatException e) {
+            jLabelResultado.setText("SYNTAX ERROR");
+        }
+        
     }//GEN-LAST:event_jButtonPotenciaActionPerformed
 
     private void jButtonRadicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRadicacionActionPerformed
-        String numero, resultado;
+        String numero;
         int indice;
         
         numero = jTextFieldComplejo.getText();
-        indice = Integer.parseInt(jTextFieldIndice.getText());
         FlagSyntax flagSyntax = new FlagSyntax();
         ArrayList<ComplejoPolar> listaResultados = new ArrayList<>();
-        
-        switch (numero.charAt(0)) {
-            case '(' :
-                ComplejoBinomica cb;
-                cb = getNumeroBinomicoDeTexto(numero,flagSyntax);
-                
-                if (flagSyntax.flag==1){                   
-                    for (int k=0; k<indice ; k++) {
-                        ComplejoPolar cp = new ComplejoPolar();
-                        cp.binomicaAPolar(cb);
-                        cp.raizNEsima(indice,k);
-                        listaResultados.add(cp);
-                    }                
-                } else {
-                    jLabelResultado.setText("SYNTAX ERROR");
-                }
-                break;
-            case '[' :
-                ComplejoPolar cp, cpOriginal;
-                cp = getNumeroPolarDeTexto (numero,flagSyntax);
-                cpOriginal = cp;
-                
-                if (flagSyntax.flag==1){   
-                    for (int k=0; k<indice ; k++) {
-                        cp.raizNEsima(indice,k);
-                        listaResultados.add(cp);
-                        
-                        cp = cpOriginal;
-                    } 
-                } else {
-                    jLabelResultado.setText("SYNTAX ERROR");
-                }
-                break;
-        }         
-        
-        String valueToBeInserted="";
-        for (int i=0; listaResultados.size() >= i; i++) {
-            
-            valueToBeInserted = valueToBeInserted + " " + resultadoPolar(listaResultados.get(i));
-     
+             
+        try {
+            indice = Integer.parseInt(jTextFieldIndice.getText());
+            switch (numero.charAt(0)) {
+                case '(' :
+                    ComplejoBinomica cb;
+                    cb = getNumeroBinomicoDeTexto(numero,flagSyntax);
+
+                    if (flagSyntax.flag==1){                   
+                        for (int k=0; k<indice ; k++) {
+                            ComplejoPolar cp = new ComplejoPolar();
+                            cp.binomicaAPolar(cb);
+                            cp.raizNEsima(indice,k);
+                            listaResultados.add(cp);
+                        }                
+                    } else {
+                        jLabelResultado.setText("SYNTAX ERROR");
+                    }
+                    break;
+                case '[' : 
+                    ComplejoPolar cp, cpOriginal;
+                    cp = getNumeroPolarDeTexto (numero,flagSyntax);
+                    cpOriginal = cp;
+
+                    if (flagSyntax.flag==1){   
+                        for (int k=0; k<indice ; k++) {
+                            cp.raizNEsima(indice,k);
+                            listaResultados.add(cp);
+
+                            cp = cpOriginal;
+                        } 
+                    } else {
+                        jLabelResultado.setText("SYNTAX ERROR");
+                    }
+                    break;     
+                default : jLabelResultado.setText("SYNTAX ERROR");
+            }         
+
+            String valueToBeInserted="";
+            for (int i=0; listaResultados.size() >= i; i++) {
+
+                valueToBeInserted = valueToBeInserted + " " + resultadoPolar(listaResultados.get(i));
+
+            }
+            jLabelResultadoRadicacion.setText(valueToBeInserted );
+            jFrameRadicacion.setVisible(true);
+        } catch (NumberFormatException e) {
+            jLabelResultado.setText("SYNTAX ERROR");
         }
-        jLabelResultadoRadicacion.setText(valueToBeInserted );
-        jFrameRadicacion.setVisible(true);
         
     }//GEN-LAST:event_jButtonRadicacionActionPerformed
 

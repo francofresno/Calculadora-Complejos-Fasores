@@ -5,7 +5,7 @@
  */
 package view;
 
-import java.awt.event.ActionListener;
+import com.placeholder.PlaceHolder;
 import model.ComplejoBinomica;
 import model.ComplejoPolar;
 import model.FlagSyntax;
@@ -21,6 +21,8 @@ public class OpBasicasGUI extends javax.swing.JFrame {
      */
     public OpBasicasGUI() {
         initComponents();
+        PlaceHolder holder1 = new PlaceHolder(jTextFieldComplejo1, "Ingrese un complejo (x,y) o [p;o]");
+        PlaceHolder holder2 = new PlaceHolder(jTextFieldComplejo2, "Ingrese un complejo (x,y) o [p;o]");           
     }
 
     /**
@@ -315,7 +317,7 @@ public class OpBasicasGUI extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
+   
     private void jButtonVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVolverActionPerformed
         this.dispose();
         new MainGUI().setVisible(true);

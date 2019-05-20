@@ -33,7 +33,7 @@ public class Main {
         System.out.println(cpp.argumento);
 
         
-       new MainGUI().setVisible(true);     
+        new MainGUI().setVisible(true);     
     }
 
 }
