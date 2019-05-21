@@ -91,9 +91,7 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
                         .addGap(100, 100, 100)
                         .addGroup(jFrameRaicesEnesimasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabelResultadoREnesimas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(jFrameRaicesEnesimasLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextFieldIndiceREnesimas, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jTextFieldIndiceREnesimas, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jFrameRaicesEnesimasLayout.createSequentialGroup()
                         .addGap(241, 241, 241)
                         .addComponent(jButtonREnesimasEnFrame)))
@@ -114,9 +112,11 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
         jFrameRadicacion.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         jFrameRadicacion.setAlwaysOnTop(true);
         jFrameRadicacion.setMinimumSize(new java.awt.Dimension(622, 300));
+        jFrameRadicacion.setType(java.awt.Window.Type.POPUP);
 
         jLabelResultadoRadicacion.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jLabelResultadoRadicacion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelResultadoRadicacion.setToolTipText("");
         jLabelResultadoRadicacion.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -418,7 +418,26 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextFieldComplejoActionPerformed
 
     private void jButtonTransformarResultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonTransformarResultadoActionPerformed
- 
+        String resultado=jLabelResultado.getText();
+       FlagSyntax flagSyntax = new FlagSyntax();
+       switch(resultado.charAt(0)){
+           case '(':  { 
+               ComplejoBinomica old = getNumeroBinomicoDeTexto(resultado,flagSyntax);
+               ComplejoPolar nuevo = new ComplejoPolar();
+               nuevo= nuevo.binomicaAPolar(old);
+               resultado = resultadoPolar(nuevo); 
+               jLabelResultado.setText(resultado);
+               break;
+           }
+           case '[' : {
+               ComplejoPolar old = getNumeroPolarDeTexto (resultado,flagSyntax);
+               ComplejoBinomica nuevo = new ComplejoBinomica ();
+               nuevo = nuevo.polarABinomica(old);
+               resultado = resultadoBinomica(nuevo);
+               jLabelResultado.setText(resultado);
+               break;
+           }
+       }   
     }//GEN-LAST:event_jButtonTransformarResultadoActionPerformed
 
     private void jButtonRaicesNEsimasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRaicesNEsimasActionPerformed
@@ -477,42 +496,51 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
 
     private void jButtonRadicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRadicacionActionPerformed
         String numero;
-        int indice;
-        
+        int indice=0;
+        String valueToBeInserted="";
         numero = jTextFieldComplejo.getText();
         FlagSyntax flagSyntax = new FlagSyntax();
-        ArrayList<ComplejoPolar> listaResultados = new ArrayList<>();
+        //ArrayList<ComplejoPolar> listaResultados = new ArrayList<>();
              
         try {
             indice = Integer.parseInt(jTextFieldIndice.getText());
+        } catch (NumberFormatException e) {
+            jLabelResultado.setText("SYNTAX ERROR");
+        }        
             if (indice > 0) {
                 switch (numero.charAt(0)) {
                     case '(' :
                         ComplejoBinomica cb;
                         cb = getNumeroBinomicoDeTexto(numero,flagSyntax);
-
-                        if (flagSyntax.flag==1){                   
-                            for (int k=0; k<indice ; k++) {
-                                ComplejoPolar cp = new ComplejoPolar();
-                                cp.binomicaAPolar(cb);
-                                cp.raizNEsima(indice,k);
-                                listaResultados.add(cp);
-                            }                
+                        if (flagSyntax.flag==1){                
+                          ComplejoPolar cp = new ComplejoPolar();
+                          cp.binomicaAPolar(cb);
+                          double modO = cp.modulo , argO = cp.argumento; 
+                          for (int k=0; k<indice ; k++) {
+                              cp.raizNEsima(indice,k);
+                              //listaResultados.add(cp);  
+                              valueToBeInserted = valueToBeInserted.concat(resultadoPolar(cp));
+                              valueToBeInserted = valueToBeInserted.concat(" ");
+                              cp.modulo = modO;
+                              cp.argumento = argO;
+                          }                          
                         } else {
                             jLabelResultado.setText("SYNTAX ERROR");
                         }
                         break;
                     case '[' : 
-                        ComplejoPolar cp, cpOriginal;
+                        ComplejoPolar cp;
                         cp = getNumeroPolarDeTexto (numero,flagSyntax);
-                        cpOriginal = cp;
-
                         if (flagSyntax.flag==1){   
+                            double modO = cp.modulo,argO=cp.argumento;
                             for (int k=0; k<indice ; k++) {
                                 cp.raizNEsima(indice,k);
-                                listaResultados.add(cp);
-
-                                cp = cpOriginal;
+                                System.out.println(resultadoPolar(cp));
+          //                      listaResultados.add(cp);           
+                                valueToBeInserted = valueToBeInserted.concat(resultadoPolar(cp));
+                                valueToBeInserted = valueToBeInserted.concat(" ");
+                                cp.modulo = modO;
+                                cp.argumento = argO;
                             } 
                         } else {
                             jLabelResultado.setText("SYNTAX ERROR");
@@ -521,18 +549,17 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
                     default : jLabelResultado.setText("SYNTAX ERROR");
                 }         
 
-                String valueToBeInserted="";
-                for (int i=0; listaResultados.size() >= i; i++) {
+                
+                /*for (int i=0; listaResultados.size() > i; i++) {
 
-                    valueToBeInserted = valueToBeInserted + " " + resultadoPolar(listaResultados.get(i));
+                    valueToBeInserted = valueToBeInserted.concat(resultadoPolar(listaResultados.get(i))) ;
+                    System.out.println(resultadoPolar(listaResultados.get(i)));
+                    valueToBeInserted = valueToBeInserted.concat(" ");
 
-                }
+                }*/
                 jLabelResultadoRadicacion.setText(valueToBeInserted );
                 jFrameRadicacion.setVisible(true);            
-            } else jLabelResultado.setText("SYNTAX ERROR");
-        } catch (NumberFormatException e) {
-            jLabelResultado.setText("SYNTAX ERROR");
-        }        
+            } else jLabelResultado.setText("SYNTAX ERROR");        
     }//GEN-LAST:event_jButtonRadicacionActionPerformed
 
     private void jTextFieldIndiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldIndiceActionPerformed

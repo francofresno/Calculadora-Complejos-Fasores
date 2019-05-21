@@ -8,7 +8,7 @@ import view.MainGUI;
 public class Main {
     public static void main(String[] args) {   
               
-        
+        /*
         ComplejoBinomica cb = new ComplejoBinomica(2,4);
         ComplejoPolar cp = new ComplejoPolar();
         cp . potenciaNatural(2) . binomicaAPolar(cb);  
@@ -32,7 +32,7 @@ public class Main {
         System.out.println(cpp.modulo);
         System.out.println(cpp.argumento);
 
-        
+        */
         new MainGUI().setVisible(true);     
     }
 

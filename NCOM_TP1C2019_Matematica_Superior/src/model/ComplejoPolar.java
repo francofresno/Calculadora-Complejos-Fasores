@@ -54,7 +54,8 @@ public class ComplejoPolar {
     }
     
     public ComplejoPolar raizNEsima( int indice, int k ) {
-        this.modulo = Math.pow(this.modulo,1/indice);
+//        this.modulo = Math.pow(this.modulo,1/indice);
+        this.modulo = Math.pow(Math.E,Math.log(this.modulo)/indice);
         this.argumento = (this.argumento + 2*k*Math.PI)/indice;
         return this;
     }
