@@ -619,24 +619,27 @@ public class OpBasicasGUI extends javax.swing.JFrame {
     private void jButtonTransformarResultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonTransformarResultadoActionPerformed
        String resultado=jLabelResultado.getText();
        FlagSyntax flagSyntax = new FlagSyntax();
-       switch(resultado.charAt(0)){
-           case '(':  { 
-               ComplejoBinomica old = getNumeroBinomicoDeTexto(resultado,flagSyntax);
-               ComplejoPolar nuevo = new ComplejoPolar();
-               nuevo= nuevo.binomicaAPolar(old);
-               resultado = resultadoPolar(nuevo); 
-               jLabelResultado.setText(resultado);
-               break;
-           }
-           case '[' : {
-               ComplejoPolar old = getNumeroPolarDeTexto (resultado,flagSyntax);
-               ComplejoBinomica nuevo = new ComplejoBinomica ();
-               nuevo = nuevo.polarABinomica(old);
-               resultado = resultadoBinomica(nuevo);
-               jLabelResultado.setText(resultado);
-               break;
-           }
-       }        
+       try{
+            switch(resultado.charAt(0)){
+                case '(':  { 
+                    ComplejoBinomica old = getNumeroBinomicoDeTexto(resultado,flagSyntax);
+                    ComplejoPolar nuevo = new ComplejoPolar();
+                    nuevo= nuevo.binomicaAPolar(old);
+                    resultado = resultadoPolar(nuevo); 
+                    jLabelResultado.setText(resultado);
+                    break;
+                }
+                case '[' : {
+                    ComplejoPolar old = getNumeroPolarDeTexto (resultado,flagSyntax);
+                    ComplejoBinomica nuevo = new ComplejoBinomica ();
+                    nuevo = nuevo.polarABinomica(old);
+                    resultado = resultadoBinomica(nuevo);
+                    jLabelResultado.setText(resultado);
+                    break;
+                }
+            } 
+       }catch(StringIndexOutOfBoundsException e){
+       }       
     }//GEN-LAST:event_jButtonTransformarResultadoActionPerformed
 
     private void jButtonSumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSumaActionPerformed

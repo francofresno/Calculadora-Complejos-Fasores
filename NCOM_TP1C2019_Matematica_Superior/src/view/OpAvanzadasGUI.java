@@ -38,8 +38,11 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
 
         jFrameRaicesEnesimas = new javax.swing.JFrame();
         jTextFieldIndiceREnesimas = new javax.swing.JTextField();
-        jLabelResultadoREnesimas = new javax.swing.JLabel();
         jButtonREnesimasEnFrame = new javax.swing.JButton();
+        jLabelRaicesPrimitivas = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jLabel2 = new javax.swing.JLabel();
         jFrameRadicacion = new javax.swing.JFrame();
         jLabelResultadoRadicacion = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -60,6 +63,12 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
         jButtonRadicacion = new javax.swing.JButton();
         jTextFieldIndice = new javax.swing.JTextField();
 
+        jFrameRaicesEnesimas.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        jFrameRaicesEnesimas.setMinimumSize(new java.awt.Dimension(557, 480));
+        jFrameRaicesEnesimas.setPreferredSize(new java.awt.Dimension(557, 480));
+        jFrameRaicesEnesimas.setSize(new java.awt.Dimension(2, 2));
+        jFrameRaicesEnesimas.setType(java.awt.Window.Type.POPUP);
+
         jTextFieldIndiceREnesimas.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         jTextFieldIndiceREnesimas.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextFieldIndiceREnesimas.setToolTipText("");
@@ -69,10 +78,6 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
             }
         });
 
-        jLabelResultadoREnesimas.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jLabelResultadoREnesimas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelResultadoREnesimas.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
         jButtonREnesimasEnFrame.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         jButtonREnesimasEnFrame.setText("RADICACION");
         jButtonREnesimasEnFrame.addActionListener(new java.awt.event.ActionListener() {
@@ -81,32 +86,64 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
             }
         });
 
+        jLabelRaicesPrimitivas.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+
+        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+
+        jTextArea1.setEditable(false);
+        jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jTextArea1.setRows(5);
+        jTextArea1.setTabSize(3);
+        jTextArea1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jTextArea1.setFocusable(false);
+        jTextArea1.setOpaque(false);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        jLabel2.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabel2.setText("Raices N-simas de la unidad");
+        jLabel2.setToolTipText("");
+
         javax.swing.GroupLayout jFrameRaicesEnesimasLayout = new javax.swing.GroupLayout(jFrameRaicesEnesimas.getContentPane());
         jFrameRaicesEnesimas.getContentPane().setLayout(jFrameRaicesEnesimasLayout);
         jFrameRaicesEnesimasLayout.setHorizontalGroup(
             jFrameRaicesEnesimasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jFrameRaicesEnesimasLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButtonREnesimasEnFrame)
+                .addGap(30, 30, 30))
+            .addGroup(jFrameRaicesEnesimasLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jFrameRaicesEnesimasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jFrameRaicesEnesimasLayout.createSequentialGroup()
-                        .addGap(100, 100, 100)
-                        .addGroup(jFrameRaicesEnesimasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabelResultadoREnesimas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jTextFieldIndiceREnesimas, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabelRaicesPrimitivas)
+                        .addContainerGap())
                     .addGroup(jFrameRaicesEnesimasLayout.createSequentialGroup()
-                        .addGap(241, 241, 241)
-                        .addComponent(jButtonREnesimasEnFrame)))
-                .addContainerGap(112, Short.MAX_VALUE))
+                        .addGroup(jFrameRaicesEnesimasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jFrameRaicesEnesimasLayout.createSequentialGroup()
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 511, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(24, 24, 24))
+                            .addGroup(jFrameRaicesEnesimasLayout.createSequentialGroup()
+                                .addComponent(jTextFieldIndiceREnesimas, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(96, 96, 96)))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         jFrameRaicesEnesimasLayout.setVerticalGroup(
             jFrameRaicesEnesimasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jFrameRaicesEnesimasLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTextFieldIndiceREnesimas, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addComponent(jLabelResultadoREnesimas, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jFrameRaicesEnesimasLayout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addGroup(jFrameRaicesEnesimasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextFieldIndiceREnesimas, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(32, 32, 32)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabelRaicesPrimitivas, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
+                .addGap(12, 12, 12)
                 .addComponent(jButtonREnesimasEnFrame, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
 
         jFrameRadicacion.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -307,7 +344,7 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
         });
 
         jButtonRaicesNEsimas.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jButtonRaicesNEsimas.setText("RAICES ENESIMAS");
+        jButtonRaicesNEsimas.setText("RAICES N-ESIMAS");
         jButtonRaicesNEsimas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonRaicesNEsimasActionPerformed(evt);
@@ -366,7 +403,7 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jTextFieldIndice, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabelResultado, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -418,37 +455,44 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextFieldComplejoActionPerformed
 
     private void jButtonTransformarResultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonTransformarResultadoActionPerformed
-        String resultado=jLabelResultado.getText();
        FlagSyntax flagSyntax = new FlagSyntax();
-       switch(resultado.charAt(0)){
-           case '(':  { 
-               ComplejoBinomica old = getNumeroBinomicoDeTexto(resultado,flagSyntax);
-               ComplejoPolar nuevo = new ComplejoPolar();
-               nuevo= nuevo.binomicaAPolar(old);
-               resultado = resultadoPolar(nuevo); 
-               jLabelResultado.setText(resultado);
-               break;
-           }
-           case '[' : {
-               ComplejoPolar old = getNumeroPolarDeTexto (resultado,flagSyntax);
-               ComplejoBinomica nuevo = new ComplejoBinomica ();
-               nuevo = nuevo.polarABinomica(old);
-               resultado = resultadoBinomica(nuevo);
-               jLabelResultado.setText(resultado);
-               break;
-           }
-       }   
+       String resultado=jLabelResultado.getText();
+       try{
+            switch(resultado.charAt(0)){
+                case '(':  { 
+                    ComplejoBinomica old = getNumeroBinomicoDeTexto(resultado,flagSyntax);
+                    ComplejoPolar nuevo = new ComplejoPolar();
+                    nuevo= nuevo.binomicaAPolar(old);
+                    resultado = resultadoPolar(nuevo); 
+                    jLabelResultado.setText(resultado);
+                    break;
+                }
+                case '[' : {
+                    ComplejoPolar old = getNumeroPolarDeTexto (resultado,flagSyntax);
+                    ComplejoBinomica nuevo = new ComplejoBinomica ();
+                    nuevo = nuevo.polarABinomica(old);
+                    resultado = resultadoBinomica(nuevo);
+                    jLabelResultado.setText(resultado);
+                    break;
+                }
+            }  
+       }catch(StringIndexOutOfBoundsException e){
+       }
     }//GEN-LAST:event_jButtonTransformarResultadoActionPerformed
 
     private void jButtonRaicesNEsimasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRaicesNEsimasActionPerformed
-        String numero, resultado;
+        /*String numero, resultado;
         int indice;
         
         numero = jTextFieldComplejo.getText();
-        indice = Integer.parseInt(jTextFieldIndice.getText());
         FlagSyntax flagSyntax = new FlagSyntax();
         
-        
+        try{
+            indice = Integer.parseInt(jTextFieldIndice.getText());
+        } catch(Exception e){
+            
+        }*/
+        jFrameRaicesEnesimas.setVisible(true);        
     }//GEN-LAST:event_jButtonRaicesNEsimasActionPerformed
 
     private void jButtonPotenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPotenciaActionPerformed
@@ -535,8 +579,8 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
                             double modO = cp.modulo,argO=cp.argumento;
                             for (int k=0; k<indice ; k++) {
                                 cp.raizNEsima(indice,k);
-                                System.out.println(resultadoPolar(cp));
-          //                      listaResultados.add(cp);           
+          //                      listaResultados.add(cp);    
+                               
                                 valueToBeInserted = valueToBeInserted.concat(resultadoPolar(cp));
                                 valueToBeInserted = valueToBeInserted.concat(" ");
                                 cp.modulo = modO;
@@ -566,13 +610,41 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldIndiceActionPerformed
 
+    private void jButtonREnesimasEnFrameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonREnesimasEnFrameActionPerformed
+        String wr="",rPrimitivas="";
+        int indice=0,cantDePrimitivos=0;
+        ComplejoPolar cp= new ComplejoPolar (1,0);    
+        try{
+            indice = Integer.parseInt(jTextFieldIndiceREnesimas.getText());
+        } catch(NumberFormatException e){
+            jLabelResultado.setText("SYNTAX ERROR");
+        }
+        if(indice>0){
+            for(int i=0;i<indice;i++){
+                wr=wr.concat("W").concat(Integer.toString(i));
+                cp.raizNEsima(indice, i);
+                if (cp.esRaizPrimitiva(indice,i) && i!=0){
+                    rPrimitivas = rPrimitivas.concat("w").concat(Integer.toString(i)).concat(" ");
+                    cantDePrimitivos++;
+                }
+                wr= wr.concat(" = ").concat(resultadoPolar(cp)).concat("\n");
+                cp.argumento=0;
+            }
+            if(cantDePrimitivos > 1){
+                rPrimitivas = rPrimitivas.concat(" son raices primitivas de orden ").concat(Integer.toString(indice));
+            }else{
+                rPrimitivas = rPrimitivas.concat(" es raiz primitiva de orden ").concat(Integer.toString(indice));
+            }
+            jLabelRaicesPrimitivas.setText(rPrimitivas);
+            jTextArea1.setText(wr);
+        }else{
+            jLabelResultado.setText("SYNTAX ERROR");
+        }
+    }//GEN-LAST:event_jButtonREnesimasEnFrameActionPerformed
+
     private void jTextFieldIndiceREnesimasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldIndiceREnesimasActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldIndiceREnesimasActionPerformed
-
-    private void jButtonREnesimasEnFrameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonREnesimasEnFrameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonREnesimasEnFrameActionPerformed
 
     private ComplejoPolar getNumeroPolarDeTexto (String textfield,FlagSyntax flagSyntax){
         ComplejoPolar numeroComplejo=new ComplejoPolar();
@@ -687,7 +759,7 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
     private javax.swing.JButton jButtonOpAvanzadas;
     private javax.swing.JButton jButtonOpBasicas;
     public javax.swing.JButton jButtonPotencia;
-    public javax.swing.JButton jButtonREnesimasEnFrame;
+    private javax.swing.JButton jButtonREnesimasEnFrame;
     public javax.swing.JButton jButtonRadicacion;
     public javax.swing.JButton jButtonRaicesNEsimas;
     public javax.swing.JButton jButtonTransformarResultado;
@@ -695,16 +767,19 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
     private javax.swing.JFrame jFrameRadicacion;
     private javax.swing.JFrame jFrameRaicesEnesimas;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     public javax.swing.JLabel jLabelOperator;
+    private javax.swing.JLabel jLabelRaicesPrimitivas;
     public javax.swing.JLabel jLabelResultado;
-    public javax.swing.JLabel jLabelResultadoREnesimas;
     public javax.swing.JLabel jLabelResultadoRadicacion;
     private javax.swing.JPanel jPanelAppTitle;
     private javax.swing.JPanel jPanelAppTitle1;
     private javax.swing.JPanel jPanelSideMenu;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
     public javax.swing.JTextField jTextFieldComplejo;
     public javax.swing.JTextField jTextFieldIndice;
-    public javax.swing.JTextField jTextFieldIndiceREnesimas;
+    private javax.swing.JTextField jTextFieldIndiceREnesimas;
     // End of variables declaration//GEN-END:variables
 
 
