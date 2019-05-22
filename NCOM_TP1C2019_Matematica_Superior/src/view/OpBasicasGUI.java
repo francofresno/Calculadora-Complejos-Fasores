@@ -53,7 +53,7 @@ public class OpBasicasGUI extends javax.swing.JFrame {
         jButtonSuma = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Operaciones basicas con Números Complejos");
+        setTitle("Operaciones Básicas");
         setResizable(false);
 
         jPanelSideMenu.setBackground(new java.awt.Color(25, 33, 43));

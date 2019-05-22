@@ -74,6 +74,7 @@ public class MainGUI extends javax.swing.JFrame {
         jButtonGithub1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/Github Icon.png"))); // NOI18N
         jButtonGithub1.setBorder(null);
         jButtonGithub1.setContentAreaFilled(false);
+        jButtonGithub1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButtonGithub1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonGithub1ActionPerformed(evt);
@@ -84,6 +85,7 @@ public class MainGUI extends javax.swing.JFrame {
         jButtonGithub2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/Github Icon.png"))); // NOI18N
         jButtonGithub2.setBorder(null);
         jButtonGithub2.setContentAreaFilled(false);
+        jButtonGithub2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButtonGithub2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonGithub2ActionPerformed(evt);
@@ -94,6 +96,7 @@ public class MainGUI extends javax.swing.JFrame {
         jButtonGithub3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/Github Icon.png"))); // NOI18N
         jButtonGithub3.setBorder(null);
         jButtonGithub3.setContentAreaFilled(false);
+        jButtonGithub3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButtonGithub3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonGithub3ActionPerformed(evt);

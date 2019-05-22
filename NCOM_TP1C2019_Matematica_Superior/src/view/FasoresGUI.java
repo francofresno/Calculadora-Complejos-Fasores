@@ -45,6 +45,7 @@ public class FasoresGUI extends javax.swing.JFrame {
         jButtonSumaFasores = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Sumatoria de Fasores");
 
         jPanelSideMenu.setBackground(new java.awt.Color(25, 33, 43));
         jPanelSideMenu.setToolTipText("");
