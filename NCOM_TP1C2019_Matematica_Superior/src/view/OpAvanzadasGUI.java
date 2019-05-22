@@ -25,6 +25,7 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
         initComponents();
         PlaceHolder holder1 = new PlaceHolder(jTextFieldComplejo, "Ingrese un complejo (x,y) o [p;o]");
         PlaceHolder holder2 = new PlaceHolder(jTextFieldIndice, "Indice > 0");
+        PlaceHolder holder3 = new PlaceHolder(jTextFieldIndiceREnesimas, "Indice > 0");
     }
 
     /**
