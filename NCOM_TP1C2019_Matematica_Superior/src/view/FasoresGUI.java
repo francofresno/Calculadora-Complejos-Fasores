@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package view;
 
 import com.placeholder.PlaceHolder;
@@ -18,8 +13,7 @@ public class FasoresGUI extends javax.swing.JFrame {
      */
     public FasoresGUI() {
         initComponents();
-        PlaceHolder holder1 = new PlaceHolder(jTextFieldComplejo1, "Ingrese f(t)");
-        PlaceHolder holder2 = new PlaceHolder(jTextFieldComplejo2, "Ingrese g(t)");
+        setPlaceholders();
     }
 
     /**
@@ -252,6 +246,11 @@ public class FasoresGUI extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void setPlaceholders() {
+        PlaceHolder holder1 = new PlaceHolder(jTextFieldComplejo1, "Ingrese f(t)");
+        PlaceHolder holder2 = new PlaceHolder(jTextFieldComplejo2, "Ingrese g(t)");
+    }
+    
     private void jButtonVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVolverActionPerformed
         this.dispose();
         new MainGUI().setVisible(true);
