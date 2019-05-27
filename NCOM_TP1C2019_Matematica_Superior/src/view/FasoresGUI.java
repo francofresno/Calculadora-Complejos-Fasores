@@ -1,6 +1,8 @@
 package view;
 
 import com.placeholder.PlaceHolder;
+import model.Fasores;
+import model.FlagSyntax;
 
 /**
  *
@@ -34,8 +36,8 @@ public class FasoresGUI extends javax.swing.JFrame {
         jButtonOpAvanzadas = new javax.swing.JButton();
         jButtonFasores = new javax.swing.JButton();
         jLabelResultado = new javax.swing.JLabel();
-        jTextFieldComplejo1 = new javax.swing.JTextField();
-        jTextFieldComplejo2 = new javax.swing.JTextField();
+        jTextFieldFasor1 = new javax.swing.JTextField();
+        jTextFieldFasor2 = new javax.swing.JTextField();
         jButtonSumaFasores = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -179,21 +181,21 @@ public class FasoresGUI extends javax.swing.JFrame {
         jLabelResultado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelResultado.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jTextFieldComplejo1.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        jTextFieldComplejo1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextFieldComplejo1.setToolTipText("");
-        jTextFieldComplejo1.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldFasor1.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        jTextFieldFasor1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextFieldFasor1.setToolTipText("");
+        jTextFieldFasor1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldComplejo1ActionPerformed(evt);
+                jTextFieldFasor1ActionPerformed(evt);
             }
         });
 
-        jTextFieldComplejo2.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        jTextFieldComplejo2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextFieldComplejo2.setToolTipText("");
-        jTextFieldComplejo2.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldFasor2.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        jTextFieldFasor2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextFieldFasor2.setToolTipText("");
+        jTextFieldFasor2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldComplejo2ActionPerformed(evt);
+                jTextFieldFasor2ActionPerformed(evt);
             }
         });
 
@@ -214,9 +216,9 @@ public class FasoresGUI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(28, 28, 28)
-                        .addComponent(jTextFieldComplejo1, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldFasor1, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(55, 55, 55)
-                        .addComponent(jTextFieldComplejo2, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldFasor2, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 28, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(97, 97, 97)
@@ -233,8 +235,8 @@ public class FasoresGUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldComplejo1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldComplejo2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldFasor1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldFasor2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34)
                 .addComponent(jLabelResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35)
@@ -247,8 +249,8 @@ public class FasoresGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void setPlaceholders() {
-        PlaceHolder holder1 = new PlaceHolder(jTextFieldComplejo1, "Ingrese f(t)");
-        PlaceHolder holder2 = new PlaceHolder(jTextFieldComplejo2, "Ingrese g(t)");
+        PlaceHolder holder1 = new PlaceHolder(jTextFieldFasor1, "Ingrese f(t)");
+        PlaceHolder holder2 = new PlaceHolder(jTextFieldFasor2, "Ingrese g(t)");
     }
     
     private void jButtonVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVolverActionPerformed
@@ -271,18 +273,73 @@ public class FasoresGUI extends javax.swing.JFrame {
         new FasoresGUI().setVisible(true);
     }//GEN-LAST:event_jButtonFasoresActionPerformed
 
-    private void jTextFieldComplejo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldComplejo1ActionPerformed
+    private void jTextFieldFasor1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldFasor1ActionPerformed
 
-    }//GEN-LAST:event_jTextFieldComplejo1ActionPerformed
+    }//GEN-LAST:event_jTextFieldFasor1ActionPerformed
 
-    private void jTextFieldComplejo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldComplejo2ActionPerformed
+    private void jTextFieldFasor2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldFasor2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldComplejo2ActionPerformed
+    }//GEN-LAST:event_jTextFieldFasor2ActionPerformed
 
     private void jButtonSumaFasoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSumaFasoresActionPerformed
+        String primerFasor, segundoFasor;
+        FlagSyntax flagSyntax = new FlagSyntax();
+        
+        primerFasor = jTextFieldFasor1.getText();
+        segundoFasor = jTextFieldFasor2.getText();
 
+        
+        
+        if (primerFasor.contains("sen")) {
+            if (segundoFasor.contains("sen")) {
+                
+            } else {
+            
+            }
+        
+        } else {
+            if (segundoFasor.contains("sen")) {
+            
+            } else {
+            
+            }
+        }
+                
+        
+        
     }//GEN-LAST:event_jButtonSumaFasoresActionPerformed
 
+    private Fasores getFasorDeTexto (String textfield,FlagSyntax flagSyntax) {
+        Fasores unFasor = new Fasores();
+        String amp,fase,frec;
+        int productoPos,primerParentesisPos,tPos;
+        
+        try {
+            productoPos = textfield.indexOf('*');
+            primerParentesisPos = textfield.indexOf('(');
+            tPos = textfield.indexOf('t');
+            
+            frec = textfield.substring(primerParentesisPos+1, tPos-1);           
+            if ( productoPos == -1 ) {
+                amp = "1";
+            } else {
+                amp = textfield.substring(0,productoPos-1);
+            }
+            if ( tPos+1 == textfield.length()-1 ) {
+                fase = "0";
+            } else {
+                fase = textfield.substring(tPos+2, textfield.length()-1);            
+            }
+            
+            unFasor.amplitud = Double.parseDouble(amp);
+            unFasor.frecuencia = Double.parseDouble(frec);
+            unFasor.fase = Double.parseDouble(fase);
+        } catch(StringIndexOutOfBoundsException | NumberFormatException  e) {
+            flagSyntax.flag = 0;
+        }       
+
+        return unFasor;
+    } 
     /**
      * @param args the command line arguments
      */
@@ -332,7 +389,7 @@ public class FasoresGUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelAppTitle;
     private javax.swing.JPanel jPanelAppTitle1;
     private javax.swing.JPanel jPanelSideMenu;
-    public javax.swing.JTextField jTextFieldComplejo1;
-    public javax.swing.JTextField jTextFieldComplejo2;
+    public javax.swing.JTextField jTextFieldFasor1;
+    public javax.swing.JTextField jTextFieldFasor2;
     // End of variables declaration//GEN-END:variables
 }

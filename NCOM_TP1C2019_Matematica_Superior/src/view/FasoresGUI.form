@@ -29,9 +29,9 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                      <Component id="jTextFieldComplejo1" min="-2" pref="248" max="-2" attributes="0"/>
+                      <Component id="jTextFieldFasor1" min="-2" pref="248" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
-                      <Component id="jTextFieldComplejo2" min="-2" pref="248" max="-2" attributes="0"/>
+                      <Component id="jTextFieldFasor2" min="-2" pref="248" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="28" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
@@ -54,8 +54,8 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jTextFieldComplejo1" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Component id="jTextFieldComplejo2" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  <Component id="jTextFieldFasor1" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                  <Component id="jTextFieldFasor2" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
               <Component id="jLabelResultado" min="-2" pref="39" max="-2" attributes="0"/>
@@ -310,7 +310,7 @@
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextFieldComplejo1">
+    <Component class="javax.swing.JTextField" name="jTextFieldFasor1">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Dialog" size="12" style="0"/>
@@ -319,13 +319,13 @@
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldComplejo1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldFasor1ActionPerformed"/>
       </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextFieldComplejo2">
+    <Component class="javax.swing.JTextField" name="jTextFieldFasor2">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Dialog" size="12" style="0"/>
@@ -334,7 +334,7 @@
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldComplejo2ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldFasor2ActionPerformed"/>
       </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
