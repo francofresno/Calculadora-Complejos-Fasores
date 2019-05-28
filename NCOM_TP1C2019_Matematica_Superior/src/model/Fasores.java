@@ -63,7 +63,7 @@ public class Fasores extends ComplejoPolar{
     
     // Resuelve siempre con la parte Real, por eso si viene un fasor con un sin(...), suma Pi/2 
     // para convertirlo en cos
-    public Fasores arreglarFase (Fasores f) {
+    public Fasores pasarACoseno (Fasores f) {
         f.fase = f.fase + (Math.PI/2);
         return f;
     }

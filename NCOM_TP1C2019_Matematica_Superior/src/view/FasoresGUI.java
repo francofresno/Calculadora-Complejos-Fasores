@@ -283,30 +283,25 @@ public class FasoresGUI extends javax.swing.JFrame {
 
     private void jButtonSumaFasoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSumaFasoresActionPerformed
         String primerFasor, segundoFasor;
-        FlagSyntax flagSyntax = new FlagSyntax();
+        FlagSyntax flagSyntaxF = new FlagSyntax();
+        FlagSyntax flagSyntaxG = new FlagSyntax();
         
         primerFasor = jTextFieldFasor1.getText();
         segundoFasor = jTextFieldFasor2.getText();
-
         
+        Fasores f = getFasorDeTexto(primerFasor,flagSyntaxF);
+        Fasores g = getFasorDeTexto(segundoFasor,flagSyntaxG);
         
-        if (primerFasor.contains("sen")) {
-            if (segundoFasor.contains("sen")) {
-                
-            } else {
+        if ( flagSyntaxF.flag != -1 && flagSyntaxG.flag != -1 ) {        
+            if (primerFasor.contains("sen")) 
+                f.pasarACoseno(f);      
+            if (segundoFasor.contains("sen")) 
+                g.pasarACoseno(g);
             
-            }
-        
-        } else {
-            if (segundoFasor.contains("sen")) {
+            // HACER SUMA
             
-            } else {
-            
-            }
-        }
-                
-        
-        
+        } else
+            jLabelResultado.setText("SYNTAX ERROR"); 
     }//GEN-LAST:event_jButtonSumaFasoresActionPerformed
 
     private Fasores getFasorDeTexto (String textfield,FlagSyntax flagSyntax) {
