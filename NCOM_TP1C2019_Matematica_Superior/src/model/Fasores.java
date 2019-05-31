@@ -3,19 +3,19 @@ package model;
 public class Fasores extends ComplejoPolar{
     // 1. Estrucutra fasores
     public double amplitud;
+    public double desplazamiento;
     public double fase;
-    public double frecuencia;
     
     public Fasores() {
         this.amplitud = 0;
+        this.desplazamiento = 0;
         this.fase = 0;
-        this.frecuencia = 0;
     }
     
-    public Fasores(double amp, double fase, double frec) {
+    public Fasores(double amp, double desplazamiento, double fase) {
         this.amplitud = amp;
+        this.desplazamiento = desplazamiento;
         this.fase = fase;
-        this.frecuencia = frec;
     }
     
     // 2. Funciones set/get
@@ -27,6 +27,14 @@ public class Fasores extends ComplejoPolar{
         this.amplitud = amp;
     }
     
+    public double getDesplazamiento () {
+        return this.desplazamiento;
+    }
+    
+    public void setDesplazamiento (double desplazamiento) {
+        this.desplazamiento = desplazamiento;
+    }
+    
     public double getFase () {
         return this.fase;
     }
@@ -34,20 +42,12 @@ public class Fasores extends ComplejoPolar{
     public void setFase (double fase) {
         this.fase = fase;
     }
-    
-    public double getFrecuencia () {
-        return this.frecuencia;
-    }
-    
-    public void setFrecuencia (double frec) {
-        this.frecuencia = frec;
-    }
     // 3. Funcion de suma de fasores
     
     public Fasores sumarFasores (Fasores f, Fasores g) {
-        double parteRealDeSuma = f.amplitud*Math.cos(f.fase) + g.amplitud*Math.cos(g.fase);
-        double parteImaginariaDeSuma = f.amplitud*Math.sin(f.fase) + g.amplitud*Math.sin(g.fase);
-        double frec = f.frecuencia;
+        double parteRealDeSuma = f.amplitud*Math.cos(f.desplazamiento) + g.amplitud*Math.cos(g.desplazamiento);
+        double parteImaginariaDeSuma = f.amplitud*Math.sin(f.desplazamiento) + g.amplitud*Math.sin(g.desplazamiento);
+        double fase = f.fase;
         
         ComplejoBinomica cBin = new ComplejoBinomica(parteRealDeSuma,parteImaginariaDeSuma);
         ComplejoPolar cPol = new ComplejoPolar();
@@ -56,7 +56,7 @@ public class Fasores extends ComplejoPolar{
         
         this.argumento = cPol.argumento;
         this.modulo = cPol.modulo;
-        this.frecuencia = frec;
+        this.fase = fase;
         
         return this;
     }
@@ -64,7 +64,7 @@ public class Fasores extends ComplejoPolar{
     // Resuelve siempre con la parte Real, por eso si viene un fasor con un sin(...), suma Pi/2 
     // para convertirlo en cos
     public Fasores pasarACoseno (Fasores f) {
-        f.fase = f.fase + (Math.PI/2);
+        f.desplazamiento = f.desplazamiento + (Math.PI/2);
         return f;
     }
     

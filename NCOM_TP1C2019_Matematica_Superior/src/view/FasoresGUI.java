@@ -306,7 +306,7 @@ public class FasoresGUI extends javax.swing.JFrame {
 
     private Fasores getFasorDeTexto (String textfield,FlagSyntax flagSyntax) {
         Fasores unFasor = new Fasores();
-        String amp,fase,frec;
+        String amp,desp,fase;
         int productoPos,primerParentesisPos,tPos;
         
         try {
@@ -314,21 +314,21 @@ public class FasoresGUI extends javax.swing.JFrame {
             primerParentesisPos = textfield.indexOf('(');
             tPos = textfield.indexOf('t');
             
-            frec = textfield.substring(primerParentesisPos+1, tPos-1);           
+            fase = textfield.substring(primerParentesisPos+1, tPos-1);           
             if ( productoPos == -1 ) {
                 amp = "1";
             } else {
                 amp = textfield.substring(0,productoPos-1);
             }
             if ( tPos+1 == textfield.length()-1 ) {
-                fase = "0";
+                desp = "0";
             } else {
-                fase = textfield.substring(tPos+2, textfield.length()-1);            
+                desp = textfield.substring(tPos+2, textfield.length()-1);            
             }
             
             unFasor.amplitud = Double.parseDouble(amp);
-            unFasor.frecuencia = Double.parseDouble(frec);
             unFasor.fase = Double.parseDouble(fase);
+            unFasor.desplazamiento = Double.parseDouble(desp);
         } catch(StringIndexOutOfBoundsException | NumberFormatException  e) {
             flagSyntax.flag = 0;
         }       
