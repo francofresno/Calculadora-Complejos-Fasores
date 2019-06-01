@@ -77,13 +77,13 @@ public class Fasores extends ComplejoPolar{
     // Resuelve siempre con la parte Real, por eso si viene un fasor con un sin(...), suma Pi/2 
     // para convertirlo en cos
     public Fasores pasarACoseno (Fasores f) {
-        f.desplazamiento = f.desplazamiento + (Math.PI/2);
+        f.desplazamiento = f.desplazamiento - (Math.PI/2);
         f.trig = 'c';
         return f;
     }
     
     public Fasores pasarASeno (Fasores f){
-        f.desplazamiento = f.desplazamiento - (Math.PI/2);
+        f.desplazamiento = f.desplazamiento + (Math.PI/2);
         f.trig='s';
         return this;
     }
