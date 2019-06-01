@@ -5,17 +5,20 @@ public class Fasores extends ComplejoPolar{
     public double amplitud;
     public double desplazamiento;
     public double fase;
+    public char trig;
     
     public Fasores() {
         this.amplitud = 0;
         this.desplazamiento = 0;
         this.fase = 0;
+        this.trig = 'c';
     }
     
-    public Fasores(double amp, double desplazamiento, double fase) {
+    public Fasores(double amp, double desplazamiento, double fase,char trig) {
         this.amplitud = amp;
         this.desplazamiento = desplazamiento;
         this.fase = fase;
+        this.trig = trig;
     }
     
     // 2. Funciones set/get
@@ -42,22 +45,32 @@ public class Fasores extends ComplejoPolar{
     public void setFase (double fase) {
         this.fase = fase;
     }
+    
+    public char getTrig () {
+        return this.trig;
+    }
+    
+    public void setTrig (char trig) {
+        this.trig = trig;
+    }
     // 3. Funcion de suma de fasores
     
     public Fasores sumarFasores (Fasores f, Fasores g) {
+        if(f.trig == 'c' && g.trig!=f.trig){
+            g.pasarACoseno(g);
+        }
+        if(f.trig == 's' && g.trig!=f.trig){
+            g.pasarASeno(g);
+        }
         double parteRealDeSuma = f.amplitud*Math.cos(f.desplazamiento) + g.amplitud*Math.cos(g.desplazamiento);
         double parteImaginariaDeSuma = f.amplitud*Math.sin(f.desplazamiento) + g.amplitud*Math.sin(g.desplazamiento);
-        double fase = f.fase;
-        
         ComplejoBinomica cBin = new ComplejoBinomica(parteRealDeSuma,parteImaginariaDeSuma);
-        ComplejoPolar cPol = new ComplejoPolar();
-        
+        ComplejoPolar cPol = new ComplejoPolar();        
         cPol.binomicaAPolar (cBin);
-        
-        this.argumento = cPol.argumento;
-        this.modulo = cPol.modulo;
-        this.fase = fase;
-        
+        this.amplitud=cPol.modulo;               
+        this.fase=f.fase;
+        this.desplazamiento = cPol.argumento;
+        this.trig=f.trig;
         return this;
     }
     
@@ -65,7 +78,14 @@ public class Fasores extends ComplejoPolar{
     // para convertirlo en cos
     public Fasores pasarACoseno (Fasores f) {
         f.desplazamiento = f.desplazamiento + (Math.PI/2);
+        f.trig = 'c';
         return f;
+    }
+    
+    public Fasores pasarASeno (Fasores f){
+        f.desplazamiento = f.desplazamiento - (Math.PI/2);
+        f.trig='s';
+        return this;
     }
     
 }

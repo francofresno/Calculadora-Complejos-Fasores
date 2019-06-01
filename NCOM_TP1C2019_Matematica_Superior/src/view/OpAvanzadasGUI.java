@@ -41,8 +41,9 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
         jTextArea1 = new javax.swing.JTextArea();
         jLabel2 = new javax.swing.JLabel();
         jFrameRadicacion = new javax.swing.JFrame();
-        jLabelResultadoRadicacion = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextAreaResultadoRad = new javax.swing.JTextArea();
         jPanelSideMenu = new javax.swing.JPanel();
         jPanelAppTitle = new javax.swing.JPanel();
         appTitle = new java.awt.Label();
@@ -62,7 +63,6 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
 
         jFrameRaicesEnesimas.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         jFrameRaicesEnesimas.setMinimumSize(new java.awt.Dimension(557, 480));
-        jFrameRaicesEnesimas.setPreferredSize(new java.awt.Dimension(557, 480));
         jFrameRaicesEnesimas.setSize(new java.awt.Dimension(2, 2));
         jFrameRaicesEnesimas.setType(java.awt.Window.Type.POPUP);
 
@@ -145,29 +145,31 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
 
         jFrameRadicacion.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         jFrameRadicacion.setAlwaysOnTop(true);
-        jFrameRadicacion.setMinimumSize(new java.awt.Dimension(622, 300));
+        jFrameRadicacion.setMinimumSize(new java.awt.Dimension(622, 310));
+        jFrameRadicacion.setPreferredSize(new java.awt.Dimension(626, 310));
         jFrameRadicacion.setType(java.awt.Window.Type.POPUP);
 
-        jLabelResultadoRadicacion.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jLabelResultadoRadicacion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelResultadoRadicacion.setToolTipText("");
-        jLabelResultadoRadicacion.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel1.setText("RESULTADO");
+        jLabel1.setText("RESULTADO RADICACION");
+
+        jTextAreaResultadoRad.setColumns(20);
+        jTextAreaResultadoRad.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jTextAreaResultadoRad.setRows(5);
+        jScrollPane2.setViewportView(jTextAreaResultadoRad);
 
         javax.swing.GroupLayout jFrameRadicacionLayout = new javax.swing.GroupLayout(jFrameRadicacion.getContentPane());
         jFrameRadicacion.getContentPane().setLayout(jFrameRadicacionLayout);
         jFrameRadicacionLayout.setHorizontalGroup(
             jFrameRadicacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jFrameRadicacionLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabelResultadoRadicacion, javax.swing.GroupLayout.DEFAULT_SIZE, 602, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(jFrameRadicacionLayout.createSequentialGroup()
-                .addGap(262, 262, 262)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jFrameRadicacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jFrameRadicacionLayout.createSequentialGroup()
+                        .addGap(52, 52, 52)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 531, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jFrameRadicacionLayout.createSequentialGroup()
+                        .addGap(207, 207, 207)
+                        .addComponent(jLabel1)))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
         jFrameRadicacionLayout.setVerticalGroup(
             jFrameRadicacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -175,8 +177,8 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
                 .addGap(25, 25, 25)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabelResultadoRadicacion, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(59, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -566,8 +568,7 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
                           for (int k=0; k<indice ; k++) {
                               cp.raizNEsima(indice,k);
                               //listaResultados.add(cp);  
-                              valueToBeInserted = valueToBeInserted.concat(resultadoPolar(cp));
-                              valueToBeInserted = valueToBeInserted.concat(" ");
+                              valueToBeInserted = valueToBeInserted.concat("W").concat(Integer.toString(k)).concat(" = ").concat(resultadoPolar(cp)).concat(("\n"));
                               cp.modulo = modO;
                               cp.argumento = argO;
                           }                          
@@ -584,8 +585,7 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
                                 cp.raizNEsima(indice,k);
           //                      listaResultados.add(cp);    
                                
-                                valueToBeInserted = valueToBeInserted.concat(resultadoPolar(cp));
-                                valueToBeInserted = valueToBeInserted.concat(" ");
+                              valueToBeInserted = valueToBeInserted.concat("W").concat(Integer.toString(k)).concat(" = ").concat(resultadoPolar(cp)).concat(("\n"));
                                 cp.modulo = modO;
                                 cp.argumento = argO;
                             } 
@@ -604,7 +604,7 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
                     valueToBeInserted = valueToBeInserted.concat(" ");
 
                 }*/
-                jLabelResultadoRadicacion.setText(valueToBeInserted );
+                jTextAreaResultadoRad.setText(valueToBeInserted );
                 jFrameRadicacion.setVisible(true);            
             } else jLabelResultado.setText("SYNTAX ERROR");        
     }//GEN-LAST:event_jButtonRadicacionActionPerformed
@@ -762,7 +762,7 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
     private javax.swing.JButton jButtonOpAvanzadas;
     private javax.swing.JButton jButtonOpBasicas;
     public javax.swing.JButton jButtonPotencia;
-    private javax.swing.JButton jButtonREnesimasEnFrame;
+    public javax.swing.JButton jButtonREnesimasEnFrame;
     public javax.swing.JButton jButtonRadicacion;
     public javax.swing.JButton jButtonRaicesNEsimas;
     public javax.swing.JButton jButtonTransformarResultado;
@@ -774,15 +774,16 @@ public class OpAvanzadasGUI extends javax.swing.JFrame {
     public javax.swing.JLabel jLabelOperator;
     private javax.swing.JLabel jLabelRaicesPrimitivas;
     public javax.swing.JLabel jLabelResultado;
-    public javax.swing.JLabel jLabelResultadoRadicacion;
     private javax.swing.JPanel jPanelAppTitle;
     private javax.swing.JPanel jPanelAppTitle1;
     private javax.swing.JPanel jPanelSideMenu;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea jTextAreaResultadoRad;
     public javax.swing.JTextField jTextFieldComplejo;
     public javax.swing.JTextField jTextFieldIndice;
-    private javax.swing.JTextField jTextFieldIndiceREnesimas;
+    public javax.swing.JTextField jTextFieldIndiceREnesimas;
     // End of variables declaration//GEN-END:variables
 
 

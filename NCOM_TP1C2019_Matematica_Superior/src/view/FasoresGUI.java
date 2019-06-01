@@ -3,7 +3,6 @@ package view;
 import com.placeholder.PlaceHolder;
 import model.Fasores;
 import model.FlagSyntax;
-
 /**
  *
  * @author Franco
@@ -36,9 +35,19 @@ public class FasoresGUI extends javax.swing.JFrame {
         jButtonOpAvanzadas = new javax.swing.JButton();
         jButtonFasores = new javax.swing.JButton();
         jLabelResultado = new javax.swing.JLabel();
-        jTextFieldFasor1 = new javax.swing.JTextField();
-        jTextFieldFasor2 = new javax.swing.JTextField();
+        jTextFieldFasorFAmp = new javax.swing.JTextField();
+        jTextFieldFasorGAmp = new javax.swing.JTextField();
         jButtonSumaFasores = new javax.swing.JButton();
+        jTextFieldFasorFDesp = new javax.swing.JTextField();
+        jTextFieldFasorGFase = new javax.swing.JTextField();
+        jTextFieldFasorGDesp = new javax.swing.JTextField();
+        jTextFieldFasorFFase = new javax.swing.JTextField();
+        jComboBoxF = new javax.swing.JComboBox<>();
+        jComboBoxG = new javax.swing.JComboBox<>();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabelG = new javax.swing.JLabel();
+        jLabelF = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sumatoria de Fasores");
@@ -173,7 +182,7 @@ public class FasoresGUI extends javax.swing.JFrame {
                 .addComponent(jButtonOpAvanzadas)
                 .addGap(18, 18, 18)
                 .addComponent(jButtonFasores)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 170, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 289, Short.MAX_VALUE)
                 .addComponent(jPanelAppTitle1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -181,21 +190,21 @@ public class FasoresGUI extends javax.swing.JFrame {
         jLabelResultado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelResultado.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jTextFieldFasor1.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        jTextFieldFasor1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextFieldFasor1.setToolTipText("");
-        jTextFieldFasor1.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldFasorFAmp.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jTextFieldFasorFAmp.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextFieldFasorFAmp.setToolTipText("");
+        jTextFieldFasorFAmp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldFasor1ActionPerformed(evt);
+                jTextFieldFasorFAmpActionPerformed(evt);
             }
         });
 
-        jTextFieldFasor2.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        jTextFieldFasor2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextFieldFasor2.setToolTipText("");
-        jTextFieldFasor2.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldFasorGAmp.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jTextFieldFasorGAmp.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextFieldFasorGAmp.setToolTipText("");
+        jTextFieldFasorGAmp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldFasor2ActionPerformed(evt);
+                jTextFieldFasorGAmpActionPerformed(evt);
             }
         });
 
@@ -207,41 +216,144 @@ public class FasoresGUI extends javax.swing.JFrame {
             }
         });
 
+        jTextFieldFasorFDesp.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jTextFieldFasorFDesp.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextFieldFasorFDesp.setToolTipText("");
+        jTextFieldFasorFDesp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldFasorFDespActionPerformed(evt);
+            }
+        });
+
+        jTextFieldFasorGFase.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jTextFieldFasorGFase.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextFieldFasorGFase.setToolTipText("");
+        jTextFieldFasorGFase.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldFasorGFaseActionPerformed(evt);
+            }
+        });
+
+        jTextFieldFasorGDesp.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jTextFieldFasorGDesp.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextFieldFasorGDesp.setToolTipText("");
+        jTextFieldFasorGDesp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldFasorGDespActionPerformed(evt);
+            }
+        });
+
+        jTextFieldFasorFFase.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jTextFieldFasorFFase.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextFieldFasorFFase.setToolTipText("");
+        jTextFieldFasorFFase.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldFasorFFaseActionPerformed(evt);
+            }
+        });
+
+        jComboBoxF.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jComboBoxF.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cos", "Sen" }));
+        jComboBoxF.setToolTipText("");
+        jComboBoxF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxFActionPerformed(evt);
+            }
+        });
+
+        jComboBoxG.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jComboBoxG.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cos", "Sen" }));
+
+        jLabel1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Funcion g(t)");
+
+        jLabel2.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Funcion f(t)");
+        jLabel2.setToolTipText("");
+
+        jLabelG.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabelG.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelG.setToolTipText("");
+
+        jLabelF.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabelF.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelF.setToolTipText("");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanelSideMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addComponent(jTextFieldFasor1, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(55, 55, 55)
-                        .addComponent(jTextFieldFasor2, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 28, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(97, 97, 97)
-                        .addComponent(jLabelResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabelF, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabelG, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jComboBoxF, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                                .addComponent(jComboBoxG, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jTextFieldFasorFDesp, javax.swing.GroupLayout.DEFAULT_SIZE, 270, Short.MAX_VALUE)
+                                    .addComponent(jTextFieldFasorFAmp)
+                                    .addComponent(jTextFieldFasorFFase))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jTextFieldFasorGFase, javax.swing.GroupLayout.DEFAULT_SIZE, 270, Short.MAX_VALUE)
+                                    .addComponent(jTextFieldFasorGAmp)
+                                    .addComponent(jTextFieldFasorGDesp)))
+                            .addComponent(jLabelResultado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jButtonSumaFasores)
-                        .addGap(253, 253, 253))))
+                        .addGap(248, 248, 248))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanelSideMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addGap(19, 19, 19)
+                .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldFasor1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldFasor2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(34, 34, 34)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jComboBoxF, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBoxG, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(29, 29, 29)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextFieldFasorFAmp, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldFasorGAmp, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextFieldFasorFFase, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldFasorGFase, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextFieldFasorGDesp, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldFasorFDesp, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(24, 24, 24)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelG, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
+                    .addComponent(jLabelF, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabelResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35)
+                .addGap(12, 12, 12)
                 .addComponent(jButtonSumaFasores, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(28, 28, 28))
         );
 
         pack();
@@ -249,10 +361,20 @@ public class FasoresGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void setPlaceholders() {
-        PlaceHolder holder1 = new PlaceHolder(jTextFieldFasor1, "Ingrese f(t)");
-        PlaceHolder holder2 = new PlaceHolder(jTextFieldFasor2, "Ingrese g(t)");
+        PlaceHolder holder1 = new PlaceHolder(jTextFieldFasorFAmp, "Ingrese Amplitud de f(t)");
+        PlaceHolder holder2 = new PlaceHolder(jTextFieldFasorGAmp, "Ingrese Amplitud de g(t)");
+        PlaceHolder holder3 = new PlaceHolder(jTextFieldFasorFFase, "Ingrese Fase de f(t)");
+        PlaceHolder holder4 = new PlaceHolder(jTextFieldFasorGFase, "Ingrese Fase de g(t)");
+        PlaceHolder holder5 = new PlaceHolder(jTextFieldFasorFDesp, "Ingrese Desplazamiento en f(t)");
+        PlaceHolder holder6 = new PlaceHolder(jTextFieldFasorGDesp, "Ingrese Desplazamiento en g(t)");
+        holder1.setSize(18);
+        holder2.setSize(18);
+        holder3.setSize(18);
+        holder4.setSize(18);
+        holder5.setSize(18);
+        holder6.setSize(18);        
     }
-    
+
     private void jButtonVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVolverActionPerformed
         this.dispose();
         new MainGUI().setVisible(true);
@@ -273,68 +395,124 @@ public class FasoresGUI extends javax.swing.JFrame {
         new FasoresGUI().setVisible(true);
     }//GEN-LAST:event_jButtonFasoresActionPerformed
 
-    private void jTextFieldFasor1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldFasor1ActionPerformed
+    private void jTextFieldFasorFAmpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldFasorFAmpActionPerformed
 
-    }//GEN-LAST:event_jTextFieldFasor1ActionPerformed
+    }//GEN-LAST:event_jTextFieldFasorFAmpActionPerformed
 
-    private void jTextFieldFasor2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldFasor2ActionPerformed
+    private void jTextFieldFasorGAmpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldFasorGAmpActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldFasor2ActionPerformed
+    }//GEN-LAST:event_jTextFieldFasorGAmpActionPerformed
 
     private void jButtonSumaFasoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSumaFasoresActionPerformed
-        String primerFasor, segundoFasor;
-        FlagSyntax flagSyntaxF = new FlagSyntax();
-        FlagSyntax flagSyntaxG = new FlagSyntax();
-        
-        primerFasor = jTextFieldFasor1.getText();
-        segundoFasor = jTextFieldFasor2.getText();
-        
-        Fasores f = getFasorDeTexto(primerFasor,flagSyntaxF);
-        Fasores g = getFasorDeTexto(segundoFasor,flagSyntaxG);
-        
-        if ( flagSyntaxF.flag != -1 && flagSyntaxG.flag != -1 ) {        
-            if (primerFasor.contains("sen")) 
-                f.pasarACoseno(f);      
-            if (segundoFasor.contains("sen")) 
-                g.pasarACoseno(g);
-            
-            // HACER SUMA
-            
-        } else
-            jLabelResultado.setText("SYNTAX ERROR"); 
+        FlagSyntax flagSyntax = new FlagSyntax();
+        Fasores f, g, suma = new Fasores();
+        String trig1 = jComboBoxF.getSelectedItem().toString(), trig2 = jComboBoxG.getSelectedItem().toString();
+        f = getFasorDeTexto('f', trig1, flagSyntax);
+        g = getFasorDeTexto('g', trig2, flagSyntax);
+        if (f.fase != g.fase) {
+            jLabelResultado.setText("MATH ERROR");
+        } else if (flagSyntax.flag != 0) {
+            suma = suma.sumarFasores(f, g);
+            jLabelResultado.setText(resultadoFasor(suma));
+        } else {
+            jLabelResultado.setText("SYNTAX ERROR");
+        }
     }//GEN-LAST:event_jButtonSumaFasoresActionPerformed
 
-    private Fasores getFasorDeTexto (String textfield,FlagSyntax flagSyntax) {
+    private void jTextFieldFasorFDespActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldFasorFDespActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldFasorFDespActionPerformed
+
+    private void jTextFieldFasorGFaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldFasorGFaseActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldFasorGFaseActionPerformed
+
+    private void jTextFieldFasorGDespActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldFasorGDespActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldFasorGDespActionPerformed
+
+    private void jTextFieldFasorFFaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldFasorFFaseActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldFasorFFaseActionPerformed
+
+    private void jComboBoxFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBoxFActionPerformed
+
+    private Fasores getFasorDeTexto(char funcion, String trig, FlagSyntax flagSyntax) {
         Fasores unFasor = new Fasores();
-        String amp,desp,fase;
-        int productoPos,primerParentesisPos,tPos;
-        
+        String amp = "0", desp = "0", fase = "0";
+        if (trig.contentEquals("Sen")) {
+            unFasor.trig = 's';
+        } else {
+            unFasor.trig = 'c';
+        }
+        if (funcion == 'f') {
+            try {
+                amp = jTextFieldFasorFAmp.getText();
+                desp = jTextFieldFasorFDesp.getText();
+                fase = jTextFieldFasorFFase.getText();
+            } catch (StringIndexOutOfBoundsException e) {
+                flagSyntax.flag = 0;
+            }
+        } else {
+            try {
+                amp = jTextFieldFasorGAmp.getText();
+                desp = jTextFieldFasorGDesp.getText();
+                fase = jTextFieldFasorGFase.getText();
+            } catch (StringIndexOutOfBoundsException e) {
+                flagSyntax.flag = 0;
+            }
+        }
         try {
-            productoPos = textfield.indexOf('*');
-            primerParentesisPos = textfield.indexOf('(');
-            tPos = textfield.indexOf('t');
-            
-            fase = textfield.substring(primerParentesisPos+1, tPos-1);           
-            if ( productoPos == -1 ) {
-                amp = "1";
-            } else {
-                amp = textfield.substring(0,productoPos-1);
-            }
-            if ( tPos+1 == textfield.length()-1 ) {
-                desp = "0";
-            } else {
-                desp = textfield.substring(tPos+2, textfield.length()-1);            
-            }
-            
             unFasor.amplitud = Double.parseDouble(amp);
-            unFasor.fase = Double.parseDouble(fase);
             unFasor.desplazamiento = Double.parseDouble(desp);
-        } catch(StringIndexOutOfBoundsException | NumberFormatException  e) {
+            unFasor.fase = Double.parseDouble(fase);
+            if (funcion == 'f') {
+                String f = "f(t) = ";
+                if (unFasor.desplazamiento > 0) {
+                    desp = "+".concat(desp);
+                }
+                if (unFasor.desplazamiento == 0) {
+                    desp = "";
+                }
+                f = f.concat(amp).concat(trig).concat("(").concat(fase).concat("t").concat(desp).concat(")");
+                jLabelF.setText(f);
+            } else {
+                String g = "g(t) = ";
+                if (unFasor.desplazamiento > 0) {
+                    desp = "+".concat(desp);
+                }
+                if (unFasor.desplazamiento == 0) {
+                    desp = "";
+                }
+                g = g.concat(amp).concat(trig).concat("(").concat(fase).concat("t").concat(desp).concat(")");
+                jLabelG.setText(g);
+            }
+        } catch (NumberFormatException e) {
             flagSyntax.flag = 0;
-        }       
+        }
 
         return unFasor;
-    } 
+    }
+
+    public String resultadoFasor(Fasores r) {
+        String res = "f(t) + g(t) = ", desp = Double.toString(r.desplazamiento), trigo;
+        if (r.desplazamiento > 0) {
+            desp = "+".concat(desp);
+        }
+        if (r.desplazamiento == 0) {
+            desp = "";
+        }
+        if (r.trig == 's') {
+            trigo = "Sen";
+        } else {
+            trigo = "Cos";
+        }
+        res = res.concat(Double.toString(r.amplitud)).concat(trigo).concat("(").concat(Double.toString(r.fase)).concat("t").concat(desp).concat(")");
+        return res;
+    }
+
     /**
      * @param args the command line arguments
      */
@@ -380,11 +558,21 @@ public class FasoresGUI extends javax.swing.JFrame {
     private javax.swing.JButton jButtonOpBasicas;
     public javax.swing.JButton jButtonSumaFasores;
     private javax.swing.JButton jButtonVolver;
+    private javax.swing.JComboBox<String> jComboBoxF;
+    private javax.swing.JComboBox<String> jComboBoxG;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabelF;
+    private javax.swing.JLabel jLabelG;
     public javax.swing.JLabel jLabelResultado;
     private javax.swing.JPanel jPanelAppTitle;
     private javax.swing.JPanel jPanelAppTitle1;
     private javax.swing.JPanel jPanelSideMenu;
-    public javax.swing.JTextField jTextFieldFasor1;
-    public javax.swing.JTextField jTextFieldFasor2;
+    public javax.swing.JTextField jTextFieldFasorFAmp;
+    public javax.swing.JTextField jTextFieldFasorFDesp;
+    public javax.swing.JTextField jTextFieldFasorFFase;
+    public javax.swing.JTextField jTextFieldFasorGAmp;
+    public javax.swing.JTextField jTextFieldFasorGDesp;
+    public javax.swing.JTextField jTextFieldFasorGFase;
     // End of variables declaration//GEN-END:variables
 }
