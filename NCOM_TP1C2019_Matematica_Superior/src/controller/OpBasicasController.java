@@ -6,7 +6,8 @@ import model.ComplejoPolar;
 import model.FlagSyntax;
 import view.OpBasicasGUI;
 
-
+// **ATENCION** Este controlador no se encuentra implementado en la solucion actual
+// Se preve en futuras actualizaciones utilizar controladores para delegar el trabajo de la view a los mismos.
 public class OpBasicasController implements ActionListener{
     OpBasicasGUI view;
     
